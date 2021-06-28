@@ -1,6 +1,6 @@
-# BennisUitvaart
+# ButterUitvaartservice
 
-> Uitvaartzorg in de Zaanstreek, Purmerend en omstreken
+> Website
 
 ## Build Setup
 
