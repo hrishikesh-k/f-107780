@@ -17,8 +17,8 @@
 				</div>
 				<div class="full">
 					<p v-inview:class="['slideUpFadeIn']" class="animate">
-						Het is vanuit de stellige overtuiging dat wanneer een goed verzorgde opbaring het rouwproces voor nabestaande pas écht begint. De eerste uren na het overlijden is het voor de nabestaanden chaos en weet men soms niet wat hen is overkomen en hoe nu verder. Door een goede
-						verzorging die met aandacht voor zowel de overledene en nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.
+						Het is vanuit de stellige overtuiging dat een goed verzorgde opbaring bijdraagt aan een goede start van het afscheid nemen en het rouwproces. Door een goede verzorging, die met aandacht voor zowel de overledene als nabestaanden is uitgevoerd, is er vaak al meer rust voor de
+						aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.
 					</p>
 					<br />
 					<p v-inview:class="['slideUpFadeIn']" class="animate">De verzorging kan thuis worden uitgevoerd, hiervoor worden alle benodigdheden meegenomen. Tevens kan de verzorging uitgevoerd worden in een ziekenhuis, hospice of afscheidshuis.</p>
