@@ -25,7 +25,10 @@
 					<br />
 					<p v-inview:class="['slideUpFadeIn']" class="animate">Met 24/7 bereikbaarheid kan altijd advies worden ingewonnen en hulp worden ingeroepen bij verzorging en opbaren. Naast wassen en aankleden kunnen implantaten, stoma, katheter en infusen verwijderd worden.</p>
 					<br />
-					<p v-inview:class="['slideUpFadeIn']">Speciale behandelingen (gas- of vochtbehandeling), Thanatopraxie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van werken nastreven.</p>
+					<p v-inview:class="['slideUpFadeIn']">
+						Gespecialiseerde overledenen zorg zoals gas- of vochtbehandeling, thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van werken
+						nastreven.
+					</p>
 					<br />
 					<p v-inview:class="['slideUpFadeIn']" class="animate">Neem vrijblijvend contact op met Butter Uitvaartservice, Ik kom graag met u in contact.</p>
 					<br />
@@ -215,14 +218,14 @@
 				<div class="third">
 					<ul v-inview:class="['slideUpFadeIn']" class="fa-ul">
 						<li>
-							<a href="#" class="button">
+							<a href="https://www.linkedin.com/in/butteruitvaartservice/" class="button" rel="noopener" target="_blank">
 								<font-awesome-icon :icon="['fab', 'linkedin']" />
 							</a>
-							<a href="#" class="button">
-								<font-awesome-icon :icon="['fab', 'instagram-square']" />
-							</a>
-							<a href="#" class="button">
+							<a href="https://www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035" class="button" rel="noopener" target="_blank">
 								<font-awesome-icon :icon="['fab', 'facebook-square']" />
+							</a>
+							<a href="https://www.instagram.com" class="button" rel="noopener" target="_blank">
+								<font-awesome-icon :icon="['fab', 'instagram-square']" />
 							</a>
 						</li>
 					</ul>
