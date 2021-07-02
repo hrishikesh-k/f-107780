@@ -4,7 +4,7 @@
 			<div class="full">
 				<client-only>
 					<scrollactive active-class="current" :alwaysTrack="true" :duration="1200" :offset="220" @itemchanged="onItemChanged">
-						<nuxt-link to="/#home" class="scrollactive-item">
+						<nuxt-link to="/#home" class="scrollactive-item" aria-label="Home">
 							<div id="nav-logo">
 								<Logo></Logo>
 							</div>
@@ -35,7 +35,7 @@
 		<div class="dark-blue">
 			<div class="full">
 				<p style="text-align: center">
-					<small>© 2021 Butter Uitvaartservice | <nuxt-link to="/cookies">Cookies</nuxt-link> | Website door <a href="https://www.designchap.nl" rel="noopener" target="_blank">DesignChap</a></small>
+					<small>© {{ copyrightYear }} Butter Uitvaartservice | <nuxt-link to="/cookies" aria-label="Cookie Verklaring">Cookies</nuxt-link> | Website door <a href="https://www.designchap.nl" rel="noopener" target="_blank" aria-label="Website van DesignChap">DesignChap</a></small>
 				</p>
 			</div>
 		</div>
@@ -66,6 +66,12 @@ export default {
 			});
 		}
 	},
+	computed: {
+		copyrightYear() {
+			var date = new Date();
+			return date.getFullYear();
+		},
+	},
 	watch: {
 		// After route change close navigation
 		$route() {
@@ -75,7 +81,6 @@ export default {
 	methods: {
 		onItemChanged() {
 			this.showNav = false;
-			console.log("item changed");
 		},
 		updateScroll() {
 			// On scroll change header class

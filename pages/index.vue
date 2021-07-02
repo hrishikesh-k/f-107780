@@ -3,7 +3,9 @@
 		<section id="home">
 			<div class="container">
 				<div class="full">
-					<h1 v-inview:class="['slideUpFadeIn']" class="animate" style="text-align: center">Post Mortem Support</h1>
+					<h3 v-inview:class="['slideUpFadeIn']" class="animate" style="text-align: center">Post Mortem Support</h3>
+					<br />
+					<h1 v-inview:class="['slideUpFadeIn']" class="animate" style="text-align: center">Met aandacht verzorgen</h1>
 				</div>
 			</div>
 			<div class="big-image-container" :style="{ backgroundImage: 'url(' + require('~/assets/images/haven-hoorn.jpg') + ')' }" v-prlx.background="{ speed: 0.07 }">
@@ -35,10 +37,10 @@
 					<h4 v-inview:class="['slideUpFadeIn']" class="animate">Jos Butter</h4>
 					<br />
 					<p v-inview:class="['slideUpFadeIn']" class="animate">
-						<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096">06-249 990 96</a>
+						<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
 					</p>
 					<p v-inview:class="['slideUpFadeIn']" class="animate">
-						<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl">jos&#64;butteruitvaart.nl</a>
+						<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
 					</p>
 				</div>
 			</div>
@@ -81,15 +83,15 @@
 						<p v-inview:class="['slideUpFadeIn']" class="animate">Ik kom graag bij u langs of nodig u uit om in Hoorn eens kennis met elkaar te maken. Tijd voor een kop koffie of thee is er altijd, en een afspraak is zo gemaakt. Ik kijk er naar uit!</p>
 					</div>
 					<div class="half">
-						<img v-inview:class="['slideUpFadeIn']" class="animate" src="~/assets/images/josbutter.jpg" alt="Jos Butter" />
+						<img v-inview:class="['slideUpFadeIn']" class="animate" src="~/assets/images/josbutter.jpg" width="520" height="473.95" alt="Jos Butter" />
 						<br />
 						<h4 v-inview:class="['slideUpFadeIn']" class="animate">Jos Butter</h4>
 						<br />
 						<p v-inview:class="['slideUpFadeIn']" class="animate">
-							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096">06-249 990 96</a>
+							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
 						</p>
 						<p v-inview:class="['slideUpFadeIn']" class="animate">
-							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl">jos&#64;butteruitvaart.nl</a>
+							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
 						</p>
 					</div>
 				</div>
@@ -124,14 +126,14 @@
 								<tr>
 									<td v-inview:class="['slideUpFadeIn']" class="animate">
 										<strong>Opbaren door 2 personen</strong><br />
-										<em>met 2 medewerkers o.a. van verdieping verplaatsen en kisten</em>
+										<em>met 2 medewerkers o.a. van verdieping verplaatsen en opbaren in kist of opbaarplank</em>
 									</td>
 									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 150,00</td>
 								</tr>
 								<tr>
 									<td v-inview:class="['slideUpFadeIn']" class="animate">
 										<strong>Assistentie opbaren</strong><br />
-										<em>o.a. helpen met van verdieping verplaatsen en kisten</em>
+										<em>o.a. helpen met van verdieping verplaatsen en opbaren in kist of opbaarplank</em>
 									</td>
 									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 75,00</td>
 								</tr>
@@ -157,10 +159,10 @@
 						<h4 v-inview:class="['slideUpFadeIn']" class="animate">Jos Butter</h4>
 						<br />
 						<p v-inview:class="['slideUpFadeIn']" class="animate">
-							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096">06-249 990 96</a>
+							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
 						</p>
 						<p v-inview:class="['slideUpFadeIn']" class="animate">
-							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl">jos&#64;butteruitvaart.nl</a>
+							<span style="color: #ed7f03"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
 						</p>
 					</div>
 				</div>
@@ -199,7 +201,7 @@
 								<span class="fa-li">
 									<font-awesome-icon :icon="['fal', 'phone']" />
 								</span>
-								<a href="tel:+31624999096">06-249 990 96</a>
+								<a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
 							</h4>
 						</li>
 						<li>
@@ -210,7 +212,7 @@
 								<span class="fa-li">
 									<font-awesome-icon :icon="['fal', 'envelope']" />
 								</span>
-								<a href="mailto:jos@butteruitvaart.nl">jos&#64;butteruitvaart.nl</a>
+								<a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
 							</h4>
 						</li>
 					</ul>
@@ -218,14 +220,11 @@
 				<div class="third">
 					<ul v-inview:class="['slideUpFadeIn']" class="fa-ul">
 						<li>
-							<a href="https://www.linkedin.com/in/butteruitvaartservice/" class="button" rel="noopener" target="_blank">
+							<a href="https://www.linkedin.com/in/butteruitvaartservice/" class="button" rel="noopener" target="_blank" aria-label="LinkedIn">
 								<font-awesome-icon :icon="['fab', 'linkedin']" />
 							</a>
-							<a href="https://www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035" class="button" rel="noopener" target="_blank">
+							<a href="https://www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035" class="button" rel="noopener" target="_blank" aria-label="Facebook">
 								<font-awesome-icon :icon="['fab', 'facebook-square']" />
-							</a>
-							<a href="https://www.instagram.com" class="button" rel="noopener" target="_blank">
-								<font-awesome-icon :icon="['fab', 'instagram-square']" />
 							</a>
 						</li>
 					</ul>
@@ -241,12 +240,6 @@ export default {
 	name: "home",
 	components: {
 		Rays,
-	},
-	beforeCreate: function () {
-		if (process.client) {
-			// because of Nuxt we need to do this
-			document.getElementById("app").className = "";
-		}
 	},
 	mounted() {
 		// Force to scroll to top because of hash scrolling

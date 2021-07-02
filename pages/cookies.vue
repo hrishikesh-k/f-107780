@@ -33,17 +33,11 @@
 <script>
 export default {
 	name: "cookies",
-	data() {
+	head() {
 		return {
-			title: "Cookies",
+			title: "Cookie Verklaring - Butter Uitvaartservice",
 			description: "",
 		};
-	},
-	beforeCreate: function () {
-		if (process.client) {
-			// because of Nuxt we need to do this
-			document.getElementById("app").className = "show-logo";
-		}
 	},
 };
 </script>

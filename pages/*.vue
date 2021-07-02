@@ -14,17 +14,11 @@
 <script>
 export default {
 	name: "notfound",
-	data() {
+	head() {
 		return {
 			title: "Pagina niet gevonden",
 			description: "",
 		};
-	},
-	beforeCreate: function () {
-		if (process.client) {
-			// because of Nuxt we need to do this
-			document.getElementById("app").className = "show-logo";
-		}
 	},
 };
 </script>

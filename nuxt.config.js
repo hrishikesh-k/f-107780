@@ -1,12 +1,6 @@
 
 export default {
     target: 'static',
-    /*
-    ** Headers of the page
-    */
-    head: {
-        titleTemplate: '%s - Butter Uitvaartservice',
-    },
     router: {
         linkActiveClass: 'current',
         linkExactActiveClass: 'current'
@@ -38,7 +32,7 @@ export default {
     buildModules: [
         '@nuxtjs/axios',
         ['@nuxtjs/google-analytics', {
-            id: 'G-WD4TD0MBMG',
+            id: 'UA-498978-34',
             set: [
                 { field: 'anonymize_ip', value: true }
             ]
@@ -51,14 +45,14 @@ export default {
         }],
         ['@nuxtjs/pwa', {
             meta: {
-                lang: 'nl',
-                name: 'Post Mortem Support',
+                name: 'Butter Uitvaartservice - Post Mortem Support in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem',
                 description: 'Met aandacht verzorgd opbaren in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem. Het is vanuit de stellige overtuiging dat wanneer een goed verzorgde opbaring het rouwproces voor nabestaande pas écht begint. De eerste uren na het overlijden is het voor de nabestaanden chaos en weet men soms niet wat hen is overkomen en hoe nu verder. Door een goede verzorging die met aandacht voor zowel de overledene en nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige nabestaanden.Het rouwen kan dan pas écht beginnen.',
+                lang: 'nl',
                 theme_color: '#ed7f03',
                 ogHost: 'https://www.butteruitvaart.nl'
             },
             manifest: {
-                name: 'Butter Uitvaartservice - Post Mortem Support in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem',
+                name: 'Butter Uitvaartservice - Post Mortem Support',
                 short_name: 'Butter Uitvaartservice',
                 description: 'Met aandacht verzorgd opbaren in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem. Het is vanuit de stellige overtuiging dat wanneer een goed verzorgde opbaring het rouwproces voor nabestaande pas écht begint. De eerste uren na het overlijden is het voor de nabestaanden chaos en weet men soms niet wat hen is overkomen en hoe nu verder. Door een goede verzorging die met aandacht voor zowel de overledene en nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige nabestaanden.Het rouwen kan dan pas écht beginnen.',
                 lang: 'nl',
@@ -80,9 +74,9 @@ export default {
             ]
         }],
     ],
-    axios: {
-        baseURL: process.env.NODE_ENV !== 'production' ? 'http://localhost:8888' : 'https://www.butteruitvaart.nl'
-    },
+    // axios: {
+    //     baseURL: process.env.NODE_ENV !== 'production' ? 'http://localhost:8888' : 'https://www.butteruitvaart.nl'
+    // },
     /*
     ** Nuxt.js modules
     */
