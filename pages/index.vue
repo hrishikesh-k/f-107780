@@ -109,26 +109,26 @@
 						<h2 v-inview:class="['slideUpFadeIn']" class="animate">Tarieven {{ currentYear }}</h2>
 					</div>
 					<div class="half">
-						<table>
+						<table v-inview:class="['slideUpFadeIn']" class="animate">
 							<tbody>
 								<tr>
-									<td v-inview:class="['slideUpFadeIn']" class="animate">
+									<td>
 										<strong>Basisverzorging door 1 persoon</strong><br />
 										<em>samen met ondernemer/familie verzorgen en opbaren</em>
 									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 175,00</td>
+									<td style="width: 25%; text-align: right">€ 175,00</td>
 								</tr>
 								<tr>
-									<td v-inview:class="['slideUpFadeIn']" class="animate">
+									<td>
 										<strong>Basisverzorging door 2 personen</strong>
 									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 240,00</td>
+									<td style="width: 25%; text-align: right">€ 240,00</td>
 								</tr>
 								<tr>
-									<td v-inview:class="['slideUpFadeIn']" class="animate">
+									<td>
 										<strong>Reiskosten per kilometer</strong>
 									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 0,27</td>
+									<td style="width: 25%; text-align: right">€ 0,27</td>
 								</tr>
 							</tbody>
 						</table>
