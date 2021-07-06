@@ -35,7 +35,7 @@
 		<div class="dark-blue">
 			<div class="full">
 				<p style="text-align: center">
-					<small>© {{ copyrightYear }} Butter Uitvaartservice | <nuxt-link to="/cookies" aria-label="Cookie Verklaring">Cookies</nuxt-link> | Website door <a href="https://www.designchap.nl" rel="noopener" target="_blank" aria-label="Website van DesignChap">DesignChap</a></small>
+					<small>© {{ currentYear }} Butter Uitvaartservice | <nuxt-link to="/cookies" aria-label="Cookie Verklaring">Cookies</nuxt-link> | Website door <a href="https://www.designchap.nl" rel="noopener" target="_blank" aria-label="Website van DesignChap">DesignChap</a></small>
 				</p>
 			</div>
 		</div>
@@ -67,7 +67,7 @@ export default {
 		}
 	},
 	computed: {
-		copyrightYear() {
+		currentYear() {
 			var date = new Date();
 			return date.getFullYear();
 		},

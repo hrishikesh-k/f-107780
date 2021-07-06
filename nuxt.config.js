@@ -65,7 +65,7 @@ export default {
             imports: [
                 {
                     set: '@fortawesome/pro-light-svg-icons',
-                    icons: ['faBars', 'faTimes', 'faMapMarkerAlt', 'faEnvelope', 'faPhone', 'faArrowLeft']
+                    icons: ['faBars', 'faTimes', 'faMapMarkerAlt', 'faEnvelope', 'faPhone', 'faArrowLeft', 'faCheck']
                 },
                 {
                     set: '@fortawesome/free-brands-svg-icons',

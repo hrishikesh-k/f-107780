@@ -106,52 +106,71 @@
 			<div class="container">
 				<div class="shadow flex">
 					<div class="full">
-						<h2 v-inview:class="['slideUpFadeIn']" class="animate">Tarieven 2021</h2>
+						<h2 v-inview:class="['slideUpFadeIn']" class="animate">Tarieven {{ currentYear }}</h2>
 					</div>
 					<div class="half">
 						<table>
 							<tbody>
 								<tr>
 									<td v-inview:class="['slideUpFadeIn']" class="animate">
+										<strong>Basisverzorging door 1 persoon</strong><br />
+										<em>samen met ondernemer/familie verzorgen en opbaren</em>
+									</td>
+									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 175,00</td>
+								</tr>
+								<tr>
+									<td v-inview:class="['slideUpFadeIn']" class="animate">
 										<strong>Basisverzorging door 2 personen</strong>
 									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 225,00</td>
+									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 240,00</td>
 								</tr>
 								<tr>
 									<td v-inview:class="['slideUpFadeIn']" class="animate">
-										<strong>Basisverzorging door 1 persoon samen met ondernemer / familie</strong>
+										<strong>Reiskosten per kilometer</strong>
 									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 150,00</td>
-								</tr>
-								<tr>
-									<td v-inview:class="['slideUpFadeIn']" class="animate">
-										<strong>Opbaren door 2 personen</strong><br />
-										<em>met 2 medewerkers o.a. van verdieping verplaatsen en opbaren in kist of opbaarplank</em>
-									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 150,00</td>
-								</tr>
-								<tr>
-									<td v-inview:class="['slideUpFadeIn']" class="animate">
-										<strong>Assistentie opbaren</strong><br />
-										<em>o.a. helpen met van verdieping verplaatsen en opbaren in kist of opbaarplank</em>
-									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 75,00</td>
-								</tr>
-								<tr>
-									<td v-inview:class="['slideUpFadeIn']" class="animate">
-										<strong>Reiskosten</strong>
-									</td>
-									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 0,25 p/km</td>
+									<td v-inview:class="['slideUpFadeIn']" class="animate" style="width: 25%; text-align: right">€ 0,27</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<div class="half">
 						<p v-inview:class="['slideUpFadeIn']">De dienstverlening bestaat verder uit:</p>
-						<ul>
-							<li v-inview:class="['slideUpFadeIn']">verwijderen van implantaten<br /><em>(pacemaker/ICD/katheter/neurostimulatoren)</em></li>
-							<li v-inview:class="['slideUpFadeIn']">aangifte van overlijden</li>
-							<li v-inview:class="['slideUpFadeIn']">collegiale hulp voor facilitaire dienstverleners</li>
+						<ul class="fa-ul">
+							<li v-inview:class="['slideUpFadeIn']">
+								<span class="fa-li">
+									<font-awesome-icon :icon="['fal', 'check']" />
+								</span>
+								verwijderen van implantaten<br />
+								<em>(pacemaker/ICD/katheter/neurostimulatoren)</em>
+							</li>
+							<li v-inview:class="['slideUpFadeIn']">
+								<span class="fa-li">
+									<font-awesome-icon :icon="['fal', 'check']" />
+								</span>
+								aangifte van overlijden
+							</li>
+							<li v-inview:class="['slideUpFadeIn']">
+								<span class="fa-li">
+									<font-awesome-icon :icon="['fal', 'check']" />
+								</span>
+								collegiale hulp voor facilitaire dienstverleners
+							</li>
+						</ul>
+						<br />
+						<p v-inview:class="['slideUpFadeIn']">In samenwerking met professionele partners:</p>
+						<ul class="fa-ul">
+							<li v-inview:class="['slideUpFadeIn']">
+								<span class="fa-li">
+									<font-awesome-icon :icon="['fal', 'check']" />
+								</span>
+								gespecialiseerde overledenen zorg
+							</li>
+							<li v-inview:class="['slideUpFadeIn']">
+								<span class="fa-li">
+									<font-awesome-icon :icon="['fal', 'check']" />
+								</span>
+								overbrenging
+							</li>
 						</ul>
 						<br />
 						<p v-inview:class="['slideUpFadeIn']" class="animate">Een uitgebreide tarievenlijst stuur ik u graag per e-mail.</p>
@@ -240,6 +259,12 @@ export default {
 	name: "home",
 	components: {
 		Rays,
+	},
+	computed: {
+		currentYear() {
+			var date = new Date();
+			return date.getFullYear();
+		},
 	},
 	mounted() {
 		// Force to scroll to top because of hash scrolling
