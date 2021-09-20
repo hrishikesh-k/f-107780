@@ -28,11 +28,11 @@
 					<p v-inview:class="['slideUpFadeIn']" class="animate">Met 24/7 bereikbaarheid kan altijd advies worden ingewonnen en hulp worden ingeroepen bij verzorging en opbaren. Naast wassen en aankleden kunnen implantaten, stoma, katheter en infusen verwijderd worden.</p>
 					<br />
 					<p v-inview:class="['slideUpFadeIn']">
-						Gespecialiseerde overledenen zorg zoals gas- of vochtbehandeling, thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van werken
+						Gespecialiseerde overledenenzorg zoals gas- of vochtbehandeling, thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van werken
 						nastreven.
 					</p>
 					<br />
-					<p v-inview:class="['slideUpFadeIn']" class="animate">Neem vrijblijvend contact op met Butter Uitvaartservice, Ik kom graag met u in contact.</p>
+					<p v-inview:class="['slideUpFadeIn']" class="animate">Neem vrijblijvend contact op met Butter Uitvaartservice, ik kom graag met u in contact.</p>
 					<br />
 					<h4 v-inview:class="['slideUpFadeIn']" class="animate">Jos Butter</h4>
 					<br />
@@ -163,7 +163,7 @@
 								<span class="fa-li">
 									<font-awesome-icon :icon="['fal', 'check']" />
 								</span>
-								gespecialiseerde overledenen zorg
+								gespecialiseerde overledenenzorg
 							</li>
 							<li v-inview:class="['slideUpFadeIn']">
 								<span class="fa-li">
