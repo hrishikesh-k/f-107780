@@ -42,15 +42,8 @@
 	</div>
 </template>
 <script>
-import "@/assets/Reset.css";
-import "@/assets/Stylesheet.less";
-import Logo from "@/components/Logo.vue";
-
 export default {
 	name: "app",
-	components: {
-		Logo,
-	},
 	data() {
 		return {
 			showNav: false,
