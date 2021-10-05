@@ -169,8 +169,6 @@
 	</svg>
 </template>
 <script>
-import gsap from "gsap";
-
 export default {
 	name: "logo",
 	mounted() {
@@ -182,60 +180,60 @@ export default {
 				return Math.random() * (max - min) + min;
 			}
 
-			var rays = document.querySelectorAll(".ray");
+			var rays = this.$gsap.utils.toArray("#butteruitvaartservice-logo .ray");
 
-			for (var i = 0; i < rays.length; i++) {
-				gsap.from(rays[i], randomNumber(1, 3), {
+			rays.forEach((ray, i) => {
+				this.$gsap.from(ray, randomNumber(1, 3), {
 					opacity: 0.1,
 					yoyo: true,
 					delay: randomNumber(1.5, 2.5),
 					repeat: -1,
 					ease: "none",
 				});
-			}
+			});
 
-			gsap.to("#mask-line-1 circle", {
+			this.$gsap.to("#mask-line-1 circle", {
 				scale: 460,
 				transformOrigin: "50%",
 				duration: 2,
 				ease: "power2.out",
 			});
-			gsap.to("#mask-line-2 circle", {
+			this.$gsap.to("#mask-line-2 circle", {
 				delay: 0.2,
 				scale: 440,
 				transformOrigin: "50%",
 				duration: 2,
 				ease: "power2.out",
 			});
-			gsap.to("#mask-line-3 circle", {
+			this.$gsap.to("#mask-line-3 circle", {
 				delay: 0.3,
 				scale: 400,
 				transformOrigin: "50%",
 				duration: 2,
 				ease: "power2.out",
 			});
-			gsap.to("#mask-line-4 circle", {
+			this.$gsap.to("#mask-line-4 circle", {
 				delay: 0.4,
 				scale: 540,
 				transformOrigin: "50%",
 				duration: 2,
 				ease: "power2.out",
 			});
-			gsap.to("#mask-line-5 circle", {
+			this.$gsap.to("#mask-line-5 circle", {
 				delay: 0.5,
 				scale: 500,
 				transformOrigin: "50%",
 				duration: 2,
 				ease: "power2.out",
 			});
-			gsap.to("#mask-line-6 circle", {
+			this.$gsap.to("#mask-line-6 circle", {
 				delay: 0.6,
 				scale: 620,
 				transformOrigin: "50%",
 				duration: 2,
 				ease: "power2.out",
 			});
-			gsap.fromTo(
+			this.$gsap.fromTo(
 				["#b", "#u_1", "#t_1", "#t_2", "#e_1", "#r_1", "#u_2", "#i_1", "#t_3", "#v_1", "#a_1", "#a_2", "#r_2", "#t_4", "#s", "#e_2", "#r_3", "#v_2", "#i_2", "#c", "#e_3"],
 				{ opacity: 0 },
 				{

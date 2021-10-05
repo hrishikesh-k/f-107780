@@ -32,6 +32,7 @@ export default {
     ** Nuxt.js dev-modules
     */
     buildModules: [
+        'nuxt-gsap-module',
         '@nuxtjs/axios',
         ['@nuxtjs/google-analytics', {
             id: 'UA-498978-34',
