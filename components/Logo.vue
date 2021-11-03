@@ -180,8 +180,7 @@ export default {
 				return Math.random() * (max - min) + min;
 			}
 
-			var rays = this.$gsap.utils.toArray("#butteruitvaartservice-logo .ray");
-
+			let rays = this.$gsap.utils.toArray("#butteruitvaartservice-logo .ray");
 			rays.forEach((ray, i) => {
 				this.$gsap.from(ray, randomNumber(1, 3), {
 					opacity: 0.1,
@@ -192,62 +191,72 @@ export default {
 				});
 			});
 
-			this.$gsap.to("#mask-line-1 circle", {
+			let tl = this.$gsap.timeline();
+			tl.to("#mask-line-1 circle", {
 				scale: 460,
 				transformOrigin: "50%",
-				duration: 2,
 				ease: "power2.out",
-			});
-			this.$gsap.to("#mask-line-2 circle", {
-				delay: 0.2,
-				scale: 440,
-				transformOrigin: "50%",
-				duration: 2,
-				ease: "power2.out",
-			});
-			this.$gsap.to("#mask-line-3 circle", {
-				delay: 0.3,
-				scale: 400,
-				transformOrigin: "50%",
-				duration: 2,
-				ease: "power2.out",
-			});
-			this.$gsap.to("#mask-line-4 circle", {
-				delay: 0.4,
-				scale: 540,
-				transformOrigin: "50%",
-				duration: 2,
-				ease: "power2.out",
-			});
-			this.$gsap.to("#mask-line-5 circle", {
-				delay: 0.5,
-				scale: 500,
-				transformOrigin: "50%",
-				duration: 2,
-				ease: "power2.out",
-			});
-			this.$gsap.to("#mask-line-6 circle", {
-				delay: 0.6,
-				scale: 620,
-				transformOrigin: "50%",
-				duration: 2,
-				ease: "power2.out",
-			});
-			this.$gsap.fromTo(
-				["#b", "#u_1", "#t_1", "#t_2", "#e_1", "#r_1", "#u_2", "#i_1", "#t_3", "#v_1", "#a_1", "#a_2", "#r_2", "#t_4", "#s", "#e_2", "#r_3", "#v_2", "#i_2", "#c", "#e_3"],
-				{ opacity: 0 },
-				{
-					delay: -2,
-					duration: 2,
-					opacity: 1,
-					ease: "sine.inOut",
-					stagger: {
-						amount: 0.8,
-						from: "center",
+			})
+				.to(
+					"#mask-line-2 circle",
+					{
+						scale: 440,
+						transformOrigin: "50%",
+						ease: "power2.out",
 					},
-				},
-				2.2
-			);
+					0.2
+				)
+				.to(
+					"#mask-line-3 circle",
+					{
+						scale: 400,
+						transformOrigin: "50%",
+						ease: "power2.out",
+					},
+					0.4
+				)
+				.to(
+					"#mask-line-4 circle",
+					{
+						scale: 540,
+						transformOrigin: "50%",
+						ease: "power2.out",
+					},
+					0.6
+				)
+				.to(
+					"#mask-line-5 circle",
+					{
+						scale: 500,
+						transformOrigin: "50%",
+						ease: "power2.out",
+					},
+					0.8
+				)
+				.to(
+					"#mask-line-6 circle",
+					{
+						scale: 620,
+						transformOrigin: "50%",
+						ease: "power2.out",
+					},
+					1
+				)
+				.fromTo(
+					["#b", "#u_1", "#t_1", "#t_2", "#e_1", "#r_1", "#u_2", "#i_1", "#t_3", "#v_1", "#a_1", "#a_2", "#r_2", "#t_4", "#s", "#e_2", "#r_3", "#v_2", "#i_2", "#c", "#e_3"],
+					{ opacity: 0 },
+					{
+						delay: -2,
+						duration: 2,
+						opacity: 1,
+						ease: "sine.inOut",
+						stagger: {
+							amount: 0.8,
+							from: "center",
+						},
+					},
+					2.2
+				);
 		},
 	},
 };

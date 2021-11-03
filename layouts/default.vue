@@ -49,15 +49,13 @@ export default {
 			showNav: false,
 		};
 	},
-	created() {
-		if (process.client) {
-			// because of Nuxt we need to do this
-			window.addEventListener("scroll", this.updateScroll);
-			window.addEventListener("load", () => {
-				// After document is loaded add className 'loaded' to body
-				document.body.className = "";
-			});
-		}
+	mounted() {
+		// because of Nuxt we need to do this
+		window.addEventListener("scroll", this.updateScroll);
+		window.addEventListener("load", () => {
+			// After document is loaded add className 'loaded' to body
+			document.body.className = "";
+		});
 	},
 	computed: {
 		currentYear() {

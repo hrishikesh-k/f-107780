@@ -119,6 +119,16 @@ button {
         0 8px 20px rgba(@darkest_background, 0.05);
 }
 
+#domloading-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    pointer-events: none;
+}
+
 #nav-backdrop {
     position: fixed;
     left: 0;
@@ -349,12 +359,12 @@ svg {
     }
 }
 
-.big-image-container {
+.bg-image-container {
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 
-    .big-image-padding {
+    .bg-image-padding {
         padding: 20%;
     }
 }
@@ -368,6 +378,10 @@ img {
     display: block;
     width: 100%;
     height: auto;
+
+    &.rounded {
+        border-radius: 100%;
+    }
 }
 
 // HR
