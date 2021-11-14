@@ -17,8 +17,8 @@ export default {
     ** Global CSS
     */
     css: [
-        "@/assets/Reset.css",
-        "@/assets/Stylesheet.less",
+        //"@/assets/Reset.css",
+        //"@/assets/Stylesheet.less",
     ],
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -32,6 +32,7 @@ export default {
     ** Nuxt.js dev-modules
     */
     buildModules: [
+        '@nuxtjs/tailwindcss',
         'nuxt-gsap-module',
         '@nuxtjs/axios',
         ['@nuxtjs/google-analytics', {

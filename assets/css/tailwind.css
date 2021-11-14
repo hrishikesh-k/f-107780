@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-3xl sm:text-5xl font-serif text-orange text-center;
+    }
+
+    h2 {
+        @apply text-3xl font-serif text-orange;
+    }
+
+    h3 {
+        @apply font-serif text-2xl text-gray text-center;
+    }
+
+    h4 {
+        @apply font-serif text-orange;
+    }
+}

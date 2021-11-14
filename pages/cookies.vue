@@ -1,33 +1,45 @@
 <template>
-	<div class="padding-top">
-		<div class="container">
-			<div class="full">
-				<h1>Cookie Verklaring</h1>
+	<div class="pt-32 sm:pt-56 h-screen">
+		<section>
+			<div class="max-w-screen-lg mx-auto px-4 py-10">
+				<h1 class="font-serif text-5xl text-orange">Cookie Verklaring</h1>
 				<br />
-				<ol>
+				<p>
+					Deze website maakt gebruik van zogeheten session cookies. Session cookies zijn functionele cookies, bedoeld om de website goed te laten werken. Voor het gebruik van session cookies is het niet vereist om de internetgebruiker eerst om toestemming te vragen. Deze cookies bevatten
+					elke keer dat je de website bezoekt een ander, tijdelijk nummer. De session cookies worden na het afsluiten van je browser verwijderd.
+				</p>
+				<p>Voor geanonimiseerd volgen van gebruikersgedrag wordt gebruik gemaakt van Google Analytics. Gegevens die worden verzameld door Google zijn:</p>
+				<ul class="fa-ul">
 					<li>
-						Deze website maakt gebruik van zogeheten session cookies. Session cookies zijn functionele cookies, bedoeld om de website goed te laten werken. Voor het gebruik van session cookies is het niet vereist om de internetgebruiker eerst om toestemming te vragen. Deze cookies
-						bevatten elke keer dat je de website bezoekt een ander, tijdelijk nummer. De session cookies worden na het afsluiten van je browser verwijderd.
+						<span class="fa-li text-orange"> <font-awesome-icon :icon="['fal', 'check']" /> </span>cookies;
 					</li>
 					<li>
-						Voor geanonimiseerd volgen van gebruikersgedrag wordt gebruik gemaakt van Google Analytics. Gegevens die worden verzameld door Google zijn:
-						<ul>
-							<li>cookies;</li>
-							<li>IP-adres (gemaskeerd);</li>
-							<li>user agents (browsers, operating system);</li>
-							<li>gebruikte zoektermen om via externe zoekmachines op onze website te komen;</li>
-							<li>gebruikte links binnen de website;</li>
-							<li>gebruikte links om op onze website te komen</li>
-						</ul>
-						Gegevens worden door Google voor een periode van 14 maanden bewaard en hierna verwijderd.<br />
-						Lees het <a href="https://policies.google.com/privacy" target="_blank">privacybeleid van Google</a> voor meer informatie, alsook het <a href="https://support.google.com/analytics/answer/6004245" target="_blank">specifieke privacybeleid van Google Analytics</a>.
+						<span class="fa-li text-orange"> <font-awesome-icon :icon="['fal', 'check']" /> </span>IP-adres (gemaskeerd);
 					</li>
-					<li>U kunt via browserinstellingen het volgen met cookies uitzetten.</li>
-				</ol>
+					<li>
+						<span class="fa-li text-orange"> <font-awesome-icon :icon="['fal', 'check']" /> </span>user agents (browsers, operating system);
+					</li>
+					<li>
+						<span class="fa-li text-orange"> <font-awesome-icon :icon="['fal', 'check']" /> </span>gebruikte zoektermen om via externe zoekmachines op onze website te komen;
+					</li>
+					<li>
+						<span class="fa-li text-orange"> <font-awesome-icon :icon="['fal', 'check']" /> </span>gebruikte links binnen de website;
+					</li>
+					<li>
+						<span class="fa-li text-orange"> <font-awesome-icon :icon="['fal', 'check']" /> </span>gebruikte links om op onze website te komen
+					</li>
+				</ul>
 				<br />
-				<nuxt-link class="submit" style="font-size: 18px; text-decoration: none; display: inline-block; width: auto" to="/#home"> <font-awesome-icon :icon="['fal', 'arrow-left']" /> Terug naar homepage </nuxt-link>
+				<p>
+					Gegevens worden door Google voor een periode van 14 maanden bewaard en hierna verwijderd.<br />
+					Lees het <a href="https://policies.google.com/privacy" class="underline" target="_blank">privacybeleid van Google</a> voor meer informatie, alsook het
+					<a href="https://support.google.com/analytics/answer/6004245" class="underline" target="_blank">specifieke privacybeleid van Google Analytics</a>.
+				</p>
+				<p>U kunt via browserinstellingen het volgen met cookies uitzetten.</p>
+				<br />
+				<nuxt-link class="bg-orange text-white shadow-md rounded-sm p-3" to="/#home"> <font-awesome-icon :icon="['fal', 'arrow-left']" /> Terug naar homepage </nuxt-link>
 			</div>
-		</div>
+		</section>
 	</div>
 </template>
 <script>
