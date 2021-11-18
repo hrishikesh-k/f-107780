@@ -267,14 +267,14 @@ export default {
 
 		this.$gsap.to("#domloading-overlay", { opacity: 0, duration: 1 });
 
-		this.$gsap.fromTo(".animate-1", { y: 10, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.6, delay: 2, duration: 1 });
+		this.$gsap.fromTo(".animate-1", { y: 10, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.6, delay: 1.6, duration: 1 });
 
 		// Animate elements in view
 		this.$gsap.set(".animate", { y: 10, opacity: 0 });
 		this.$ScrollTrigger.batch(".animate", {
 			once: true,
-			onEnter: (elements, triggers) => {
-				this.$gsap.to(elements, { y: 0, opacity: 1, stagger: 0.4, duration: 1 });
+			onEnter: (elements) => {
+				this.$gsap.to(elements, { y: 0, opacity: 1, duration: 1 });
 			},
 		});
 

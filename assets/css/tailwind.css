@@ -18,4 +18,8 @@
     h4 {
         @apply font-serif text-orange;
     }
+
+    nav ul li a {
+        @apply w-screen sm:w-full block p-2 text-center hover:text-orange border-b-4 border-transparent hover:border-orange transition-all duration-200
+    }
 }

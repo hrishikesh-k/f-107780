@@ -1,5 +1,11 @@
 module.exports = {
-    purge: [],
+    purge: [
+        './components/**/*.{vue,js}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './plugins/**/*.{js,ts}',
+        './nuxt.config.{js,ts}',
+    ],
     darkMode: false, // or 'media' or 'class'
     theme: {
         colors: {
@@ -22,9 +28,6 @@ module.exports = {
         fontFamily: {
             sans: ['Roboto', 'sans-serif'],
             serif: ['Roboto Slab', 'serif'],
-        }, fontWeight: {
-            normal: 300,
-            bold: 500,
         },
     },
     variants: {

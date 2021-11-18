@@ -1,5 +1,5 @@
 <template>
-	<div class="pt-32 sm:pt-56 h-screen">
+	<div class="pt-32 sm:pt-56">
 		<section>
 			<div class="max-w-screen-lg mx-auto px-4 py-10">
 				<h1 class="font-serif text-5xl text-orange">Niet gevonden</h1>

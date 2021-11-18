@@ -43,8 +43,14 @@ export default {
         }],
         ['@nuxtjs/google-fonts', {
             families: {
-                'Roboto+Slab': [300],
-                'Roboto': [300, 500],
+                'Roboto+Slab': {
+                    wght: [300, 400, 500],
+                    ital: [300, 400, 500]
+                },
+                'Roboto': {
+                    wght: [300, 400, 500],
+                    ital: [300, 400, 500]
+                },
             }, display: 'swap'
         }],
         ['@nuxtjs/pwa', {
