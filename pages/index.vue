@@ -237,7 +237,7 @@
 				</div>
 			</div>
 		</section>
-		<div id="domloading-overlay"></div>
+		<div id="domloading-overlay" class="fixed left-0 right-0 top-0 bottom-0 bg-white pointer-events-none"></div>
 	</div>
 </template>
 
