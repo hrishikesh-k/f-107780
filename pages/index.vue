@@ -10,32 +10,37 @@
 		<section class="bg-image-container py-40 sm:py-72 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + require('~/assets/images/haven-hoorn.jpg') + ')' }"></section>
 		<section id="service">
 			<div class="max-w-screen-lg mx-auto px-4 py-10">
-				<h2 class="animate-1">Met aandacht verzorgd opbaren</h2>
+				<h2 class="animate">Met aandacht verzorgd opbaren</h2>
 				<br />
-				<p class="animate">
-					Het is vanuit de stellige overtuiging dat een goed verzorgde opbaring bijdraagt aan een goede start van het afscheid nemen en het rouwproces. Door een goede verzorging, die met aandacht voor zowel de overledene als nabestaanden is uitgevoerd, is er vaak al meer rust voor de
-					aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.
-				</p>
-				<br />
-				<p class="animate">De verzorging kan thuis worden uitgevoerd, hiervoor worden alle benodigdheden meegenomen. Tevens kan de verzorging uitgevoerd worden in een ziekenhuis, hospice of afscheidshuis.</p>
-				<br />
-				<p class="animate">Met 24/7 bereikbaarheid kan altijd advies worden ingewonnen en hulp worden ingeroepen bij verzorging en opbaren. Naast wassen en aankleden kunnen implantaten, stoma, katheter en infusen verwijderd worden.</p>
-				<br />
-				<p>
-					Gespecialiseerde overledenenzorg zoals gas- of vochtbehandeling, thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van werken
-					nastreven.
-				</p>
-				<br />
-				<p class="animate">Neem vrijblijvend contact op met Butter Uitvaartservice, ik kom graag met u in contact.</p>
-				<br />
-				<h4 class="animate">Jos Butter</h4>
-				<br />
-				<p class="animate">
-					<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
-				</p>
-				<p class="animate">
-					<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
-				</p>
+				<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
+					<div class="w-screen">
+						<p class="animate">
+							Het is vanuit de stellige overtuiging dat een goed verzorgde opbaring bijdraagt aan een goede start van het afscheid nemen en het rouwproces. Door een goede verzorging, die met aandacht voor zowel de overledene als nabestaanden is uitgevoerd, is er vaak al meer rust voor
+							de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.
+						</p>
+						<br />
+						<p class="animate">De verzorging kan thuis worden uitgevoerd, hiervoor worden alle benodigdheden meegenomen. Tevens kan de verzorging uitgevoerd worden in een ziekenhuis, hospice of afscheidshuis.</p>
+						<br />
+						<p class="animate">Met 24/7 bereikbaarheid kan altijd advies worden ingewonnen en hulp worden ingeroepen bij verzorging en opbaren. Naast wassen en aankleden kunnen implantaten, stoma, katheter en infusen verwijderd worden.</p>
+					</div>
+					<div class="w-screen">
+						<p>
+							Gespecialiseerde overledenenzorg zoals gas- of vochtbehandeling, thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van
+							werken nastreven.
+						</p>
+						<br />
+						<p class="animate">Neem vrijblijvend contact op met Butter Uitvaartservice, ik kom graag met u in contact.</p>
+						<br />
+						<h4 class="animate">Jos Butter</h4>
+						<br />
+						<p class="animate">
+							<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
+						</p>
+						<p class="animate">
+							<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section id="voorstellen">
@@ -47,7 +52,7 @@
 				<div class="bg-blue p-10 text-white">
 					<h2>Even voorstellen</h2>
 					<br />
-					<div class="flex flex-wrap sm:flex-nowrap gap-10">
+					<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
 						<div class="w-screen">
 							<p>
 								Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn samen met mijn vrouw Ellie en twee stoere knapen, Stan en Yaniek. Als 8 jarig jongentje liep ik al achter de fanfare aan en is mijn passie voor muziek voor het leven verankerd. In mijn vrije tijd

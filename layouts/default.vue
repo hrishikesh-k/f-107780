@@ -1,11 +1,11 @@
 <template>
 	<div id="app" class="bg-gray-lightest font-sans font-light text-base text-blue">
 		<div class="fixed w-screen bg-white shadow-lg z-10">
-			<div class="container max-w-md mx-auto px-4">
+			<div class="container max-w-md mx-auto">
 				<client-only>
 					<scrollactive :alwaysTrack="true" :duration="1200" :offset="220" @itemchanged="onItemChanged">
 						<nuxt-link to="/#home" class="scrollactive-item" aria-label="Home">
-							<div class="px-2 pt-3 pb-3 sm:pb-10">
+							<div class="px-4 pt-3 pb-3 sm:pb-10">
 								<Logo></Logo>
 							</div>
 						</nuxt-link>
@@ -13,8 +13,8 @@
 				</client-only>
 				<button class="absolute right-4 top-4 text-2xl text-blue sm:hidden" aria-label="Open navigatie" @click="showNav = !showNav">
 					<transition name="rotateFade" mode="out-in">
-						<font-awesome-icon v-if="showNav === false" :icon="['fal', 'bars']" fixed-width key="bars" />
-						<font-awesome-icon v-if="showNav === true" :icon="['fal', 'times']" fixed-width key="times" />
+						<font-awesome-icon v-if="showNav" :icon="['fal', 'times']" fixed-width key="times" />
+						<font-awesome-icon v-else :icon="['fal', 'bars']" fixed-width key="bars" />
 					</transition>
 				</button>
 				<div class="overflow-hidden sm:overflow-auto transition-all duration-500 sm:max-h-full" :class="[showNav ? 'max-h-96' : 'max-h-0']">
