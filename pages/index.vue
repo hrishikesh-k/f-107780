@@ -131,7 +131,7 @@
 										<font-awesome-icon :icon="['fal', 'check']" />
 									</span>
 									verwijderen van implantaten<br />
-									<em>(pacemaker/ICD/katheter/neurostimulatoren)</em>
+									<em>(pacemaker, ICD, katheter, neurostimulatoren)</em>
 								</li>
 								<li>
 									<span class="fa-li text-orange">
