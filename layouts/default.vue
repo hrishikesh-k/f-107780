@@ -1,6 +1,6 @@
 <template>
-	<div id="app" class="bg-gray-lightest font-sans font-light text-base text-blue">
-		<div class="fixed w-screen bg-white shadow-lg z-10">
+	<div id="app" class="grid grid-cols-1 min-h-screen w-screen bg-gray-lightest font-sans font-light text-base text-blue">
+		<div class="fixed left-0 right-0 top-0 bg-white shadow-lg z-10">
 			<div class="container max-w-md mx-auto">
 				<client-only>
 					<scrollactive :alwaysTrack="true" :duration="1200" :offset="220" @itemchanged="onItemChanged">
@@ -59,10 +59,6 @@ export default {
 	},
 	mounted() {
 		window.addEventListener("scroll", this.updateScroll);
-		window.addEventListener("load", () => {
-			// After document is loaded add className 'loaded' to body
-			document.body.className = "";
-		});
 	},
 	computed: {
 		currentYear() {

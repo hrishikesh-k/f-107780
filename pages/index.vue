@@ -13,7 +13,7 @@
 				<h2 class="animate">Met aandacht verzorgd opbaren</h2>
 				<br />
 				<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
-					<div class="w-screen">
+					<div class="w-screen sm:w-1/2">
 						<p class="animate">
 							Het is vanuit de stellige overtuiging dat een goed verzorgde opbaring bijdraagt aan een goede start van het afscheid nemen en het rouwproces. Door een goede verzorging, die met aandacht voor zowel de overledene als nabestaanden is uitgevoerd, is er vaak al meer rust voor
 							de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.
@@ -23,7 +23,7 @@
 						<br />
 						<p class="animate">Met 24/7 bereikbaarheid kan altijd advies worden ingewonnen en hulp worden ingeroepen bij verzorging en opbaren. Naast wassen en aankleden kunnen implantaten, stoma, katheter en infusen verwijderd worden.</p>
 					</div>
-					<div class="w-screen">
+					<div class="w-screen sm:w-1/2">
 						<p>
 							Gespecialiseerde overledenenzorg zoals gas- of vochtbehandeling, thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van
 							werken nastreven.
@@ -53,7 +53,7 @@
 					<h2>Even voorstellen</h2>
 					<br />
 					<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
-						<div class="w-screen">
+						<div class="w-screen sm:w-1/2">
 							<p>
 								Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn samen met mijn vrouw Ellie en twee stoere knapen, Stan en Yaniek. Als 8 jarig jongentje liep ik al achter de fanfare aan en is mijn passie voor muziek voor het leven verankerd. In mijn vrije tijd
 								ben ik een enthousiast trompettist bij coverband Eleven20one, een negen koppige band waar ik met soulmates muziek kan maken.
@@ -70,7 +70,7 @@
 								overlijden van hun dierbare.
 							</p>
 						</div>
-						<div class="w-screen">
+						<div class="w-screen sm:w-1/2">
 							<p>
 								Als vrijwilliger ben ik werkzaam bij Inloophuis PISA in Hoorn. PISA staat voor Praten Informatie Steun en Aandacht. Het is dankbaar werk om er te kunnen zijn voor de mensen die met kanker in aanraking zijn gekomen of zijn geweest. Vaak is alleen al luisteren naar hun
 								verhaal een grote steun. Hier zet ik mij met alle liefde voor in.
@@ -98,7 +98,7 @@
 					<h2>Tarieven {{ currentYear }}</h2>
 					<br />
 					<div class="flex flex-wrap sm:flex-nowrap gap-10">
-						<div class="w-screen">
+						<div class="w-screen sm:w-1/2">
 							<table class="table-fixed">
 								<tbody>
 									<tr>
@@ -123,7 +123,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="w-screen">
+						<div class="w-screen sm:w-1/2">
 							<p>De dienstverlening bestaat verder uit:</p>
 							<ul class="fa-ul">
 								<li>
@@ -183,12 +183,12 @@
 				<Rays class="w-64 mx-auto"></Rays>
 			</div>
 		</section>
-		<section id="contact" class="bg-blue">
+		<section id="contact" class="flex-none bg-blue">
 			<div class="max-w-screen-lg mx-auto px-4 py-10">
 				<h1 class="text-left animate">Contact</h1>
 				<br />
 				<div class="flex flex-wrap sm:flex-nowrap items-top justify-center gap-10 p-2">
-					<div class="w-screen">
+					<div class="w-screen sm:w-1/3">
 						<ul class="fa-ul font-sans text-white">
 							<li class="animate">
 								<h4 class="text-orange">
@@ -202,7 +202,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="w-screen">
+					<div class="w-screen sm:w-1/3">
 						<ul class="fa-ul font-sans text-white">
 							<li class="animate">
 								<h4>
@@ -225,7 +225,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="w-screen">
+					<div class="w-screen sm:w-1/3">
 						<ul class="fa-ul flex space-x-4 font-sans text-white">
 							<li>
 								<a href="https://www.linkedin.com/in/butteruitvaartservice/" class="text-4xl hover:text-orange transition-colors duration-300 animate" rel="noopener" target="_blank" aria-label="LinkedIn">
