@@ -7,13 +7,13 @@
 				<h1 class="animate-1">Met aandacht verzorgen</h1>
 			</div>
 		</section>
-		<section class="bg-image-container py-40 sm:py-72 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + require('~/assets/images/haven-hoorn.jpg') + ')' }"></section>
+		<section class="bg-image-container py-40 mx-4 sm:py-72 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + require('~/assets/images/haven-hoorn.jpg') + ')' }"></section>
 		<section id="service">
 			<div class="max-w-screen-lg mx-auto px-4 py-10">
 				<h2 class="animate">Met aandacht verzorgd opbaren</h2>
 				<br />
 				<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
-					<div class="w-screen sm:w-1/2">
+					<div class="w-full sm:w-1/2">
 						<p class="animate">
 							Het is vanuit de stellige overtuiging dat een goed verzorgde opbaring bijdraagt aan een goede start van het afscheid nemen en het rouwproces. Door een goede verzorging, die met aandacht voor zowel de overledene als nabestaanden is uitgevoerd, is er vaak al meer rust voor
 							de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.
@@ -23,7 +23,7 @@
 						<br />
 						<p class="animate">Met 24/7 bereikbaarheid kan altijd advies worden ingewonnen en hulp worden ingeroepen bij verzorging en opbaren. Naast wassen en aankleden kunnen implantaten, stoma, katheter en infusen verwijderd worden.</p>
 					</div>
-					<div class="w-screen sm:w-1/2">
+					<div class="w-full sm:w-1/2">
 						<p>
 							Gespecialiseerde overledenenzorg zoals gas- of vochtbehandeling, thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking met professionele partners die dezelfde kwaliteit van
 							werken nastreven.
@@ -43,17 +43,14 @@
 				</div>
 			</div>
 		</section>
-		<section id="voorstellen">
-			<div class="max-w-screen-lg mx-auto px-4 pb-10 pt-32 animate">
-				<div class="h-16"></div>
-				<div class="flex relative bg-blue h-16">
-					<img class="h-60 w-60 absolute left-0 right-0 -top-36 shadow-lg border-2 border-white rounded-full mx-auto" src="~/assets/images/josbutter.jpg" width="520" height="520" alt="Jos Butter" />
-				</div>
-				<div class="bg-blue p-10 text-white">
+		<section id="voorstellen" class="relative">
+			<div style="grid-template-rows: 7rem" class="grid relative max-w-screen-lg mx-auto px-4 pb-10 pt-32 animate">
+				<img class="relative h-60 w-60 shadow-lg border-2 border-white rounded-full mx-auto" src="~/assets/images/josbutter.jpg" width="520" height="520" alt="Jos Butter" />
+				<div class="col-start-1 row-start-2 bg-blue p-10 pt-36 text-white">
 					<h2>Even voorstellen</h2>
 					<br />
 					<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
-						<div class="w-screen sm:w-1/2">
+						<div>
 							<p>
 								Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn samen met mijn vrouw Ellie en twee stoere knapen, Stan en Yaniek. Als 8 jarig jongentje liep ik al achter de fanfare aan en is mijn passie voor muziek voor het leven verankerd. In mijn vrije tijd
 								ben ik een enthousiast trompettist bij coverband Eleven20one, een negen koppige band waar ik met soulmates muziek kan maken.
@@ -69,8 +66,6 @@
 								afscheid nemen kan dan écht beginnen. Om het vak Overledenenverzorging en opbaren goed te kunnen uitvoeren heb ik verschillende opleidingen, cursussen en stages gevolgd. De opgedane kennis en vaardigheden kan ik nu gebruiken om andere mensen te helpen na het
 								overlijden van hun dierbare.
 							</p>
-						</div>
-						<div class="w-screen sm:w-1/2">
 							<p>
 								Als vrijwilliger ben ik werkzaam bij Inloophuis PISA in Hoorn. PISA staat voor Praten Informatie Steun en Aandacht. Het is dankbaar werk om er te kunnen zijn voor de mensen die met kanker in aanraking zijn gekomen of zijn geweest. Vaak is alleen al luisteren naar hun
 								verhaal een grote steun. Hier zet ik mij met alle liefde voor in.
@@ -91,14 +86,14 @@
 				</div>
 			</div>
 		</section>
-		<section class="bg-image-container py-40 sm:py-96 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + require('~/assets/images/trees.jpg') + ')' }"></section>
+		<section class="bg-image-container py-40 mx-4 sm:py-96 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + require('~/assets/images/trees.jpg') + ')' }"></section>
 		<section id="tarieven">
 			<div class="max-w-screen-lg mx-auto px-4 py-10 animate">
 				<div class="bg-white shadow-md p-10">
 					<h2>Tarieven {{ currentYear }}</h2>
 					<br />
 					<div class="flex flex-wrap sm:flex-nowrap gap-10">
-						<div class="w-screen sm:w-1/2">
+						<div class="w-full sm:w-1/2">
 							<table class="table-fixed">
 								<tbody>
 									<tr>
@@ -123,7 +118,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="w-screen sm:w-1/2">
+						<div class="w-full sm:w-1/2">
 							<p>De dienstverlening bestaat verder uit:</p>
 							<ul class="fa-ul">
 								<li>
@@ -188,8 +183,8 @@
 				<h1 class="text-left animate">Contact</h1>
 				<br />
 				<div class="flex flex-wrap sm:flex-nowrap items-top justify-center gap-10 p-2">
-					<div class="w-screen sm:w-1/3">
-						<ul class="fa-ul font-sans text-white">
+					<div class="w-full sm:w-1/3">
+						<ul class="fa-ul ml-6 font-sans text-white">
 							<li class="animate">
 								<h4 class="text-orange">
 									<span class="fa-li text-orange">
@@ -202,8 +197,8 @@
 							</li>
 						</ul>
 					</div>
-					<div class="w-screen sm:w-1/3">
-						<ul class="fa-ul font-sans text-white">
+					<div class="w-full sm:w-1/3">
+						<ul class="fa-ul ml-6 font-sans text-white">
 							<li class="animate">
 								<h4>
 									<span class="fa-li text-orange">
@@ -225,8 +220,8 @@
 							</li>
 						</ul>
 					</div>
-					<div class="w-screen sm:w-1/3">
-						<ul class="fa-ul flex space-x-4 font-sans text-white">
+					<div class="w-full sm:w-1/3">
+						<ul class="fa-ul ml-6 flex space-x-4 font-sans text-white">
 							<li>
 								<a href="https://www.linkedin.com/in/butteruitvaartservice/" class="text-4xl hover:text-orange transition-colors duration-300 animate" rel="noopener" target="_blank" aria-label="LinkedIn">
 									<font-awesome-icon :icon="['fab', 'linkedin']" />
