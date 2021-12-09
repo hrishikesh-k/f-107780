@@ -50,7 +50,7 @@
 					<h2>Even voorstellen</h2>
 					<br />
 					<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
-						<div>
+						<div class="w-full sm:w-1/2">
 							<p>
 								Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn samen met mijn vrouw Ellie en twee stoere knapen, Stan en Yaniek. Als 8 jarig jongentje liep ik al achter de fanfare aan en is mijn passie voor muziek voor het leven verankerd. In mijn vrije tijd
 								ben ik een enthousiast trompettist bij coverband Eleven20one, een negen koppige band waar ik met soulmates muziek kan maken.
@@ -66,6 +66,8 @@
 								afscheid nemen kan dan écht beginnen. Om het vak Overledenenverzorging en opbaren goed te kunnen uitvoeren heb ik verschillende opleidingen, cursussen en stages gevolgd. De opgedane kennis en vaardigheden kan ik nu gebruiken om andere mensen te helpen na het
 								overlijden van hun dierbare.
 							</p>
+						</div>
+						<div class="w-full sm:w-1/2">
 							<p>
 								Als vrijwilliger ben ik werkzaam bij Inloophuis PISA in Hoorn. PISA staat voor Praten Informatie Steun en Aandacht. Het is dankbaar werk om er te kunnen zijn voor de mensen die met kanker in aanraking zijn gekomen of zijn geweest. Vaak is alleen al luisteren naar hun
 								verhaal een grote steun. Hier zet ik mij met alle liefde voor in.
