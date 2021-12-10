@@ -17,8 +17,7 @@ export default {
     ** Global CSS
     */
     css: [
-        //"@/assets/Reset.css",
-        //"@/assets/Stylesheet.less",
+        "@/assets/css/main.css",
     ],
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -26,13 +25,13 @@ export default {
     ** Plugins to load before mounting the App
     */
     plugins: [
-        { src: '@/plugins/plugins', ssr: false }
+        { src: '@/plugins/plugins', mode: 'client' }
     ],
     /*
     ** Nuxt.js dev-modules
     */
     buildModules: [
-        '@nuxtjs/tailwindcss',
+        '@nuxt/postcss8',
         'nuxt-gsap-module',
         '@nuxtjs/axios',
         ['@nuxtjs/google-analytics', {
@@ -104,6 +103,7 @@ export default {
     ** Build configuration
     */
     build: {
+        postcss: { plugins: { tailwindcss: {}, autoprefixer: {}, }, },
         /*
         ** You can extend webpack config here
         */

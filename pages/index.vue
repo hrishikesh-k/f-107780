@@ -34,10 +34,10 @@
 						<h4 class="animate">Jos Butter</h4>
 						<br />
 						<p class="animate">
-							<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
+							<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" class="underline decoration-orange hover:text-orange transition-colors duration-300" aria-label="Bel Jos Butter">06-249 990 96</a>
 						</p>
 						<p class="animate">
-							<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
+							<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" class="underline decoration-orange hover:text-orange transition-colors duration-300" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
 						</p>
 					</div>
 				</div>
@@ -49,41 +49,33 @@
 				<div class="col-start-1 row-start-2 bg-blue p-10 pt-36 text-white">
 					<h2>Even voorstellen</h2>
 					<br />
-					<div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
-						<div class="w-full sm:w-1/2">
-							<p>
-								Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn samen met mijn vrouw Ellie en twee stoere knapen, Stan en Yaniek. Als 8 jarig jongentje liep ik al achter de fanfare aan en is mijn passie voor muziek voor het leven verankerd. In mijn vrije tijd
-								ben ik een enthousiast trompettist bij coverband Eleven20one, een negen koppige band waar ik met soulmates muziek kan maken.
-							</p>
-							<br />
-							<p>
-								Als mensen-mens help en ontzorg ik graag anderen. Ik wil graag iets voor een ander kunnen betekenen, hierin vind ik voldoening. De waardering die daarvoor terugkomt is voor mij onbetaalbaar. Na de beslissing om na 20 jaar het roer om te gooien ben ik op zoek gegaan
-								naar werkzaamheden die vooral te maken hebben met ontzorgen en helpen van anderen. Dat ik deze elementen direct terugvind in de uitvaartbranche vind ik zelf niet gek. De interesse voor de uitvaart is door de eigen ervaringen in mijn omgeving verder aangewakkerd.
-							</p>
-							<br />
-							<p>
-								Door kennis te maken met veel mensen in het werkveld van de uitvaart, heb ik ontdekt dat het verzorgen van overledenen heel goed bij mij past. Een goede verzorging en opbaring uitvoeren is de eerste aanzet voor nabestaanden om het rouwproces te kunnen aanvangen. Het
-								afscheid nemen kan dan écht beginnen. Om het vak Overledenenverzorging en opbaren goed te kunnen uitvoeren heb ik verschillende opleidingen, cursussen en stages gevolgd. De opgedane kennis en vaardigheden kan ik nu gebruiken om andere mensen te helpen na het
-								overlijden van hun dierbare.
-							</p>
-						</div>
-						<div class="w-full sm:w-1/2">
-							<p>
-								Als vrijwilliger ben ik werkzaam bij Inloophuis PISA in Hoorn. PISA staat voor Praten Informatie Steun en Aandacht. Het is dankbaar werk om er te kunnen zijn voor de mensen die met kanker in aanraking zijn gekomen of zijn geweest. Vaak is alleen al luisteren naar hun
-								verhaal een grote steun. Hier zet ik mij met alle liefde voor in.
-							</p>
-							<br />
-							<p>Ik kom graag bij u langs of nodig u uit om in Hoorn eens kennis met elkaar te maken. Tijd voor een kop koffie of thee is er altijd, en een afspraak is zo gemaakt. Ik kijk er naar uit!</p>
-							<br />
-							<h4 class="font-serif text-orange">Jos Butter</h4>
-							<br />
-							<p>
-								<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
-							</p>
-							<p>
-								<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
-							</p>
-						</div>
+					<div class="columns-1 sm:columns-2 gap-6 sm:gap-10">
+						<p class="mb-6">
+							Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn samen met mijn vrouw Ellie en twee stoere knapen, Stan en Yaniek. Als 8 jarig jongentje liep ik al achter de fanfare aan en is mijn passie voor muziek voor het leven verankerd. In mijn vrije tijd ben
+							ik een enthousiast trompettist bij coverband Eleven20one, een negen koppige band waar ik met soulmates muziek kan maken.
+						</p>
+						<p class="mb-6">
+							Als mensen-mens help en ontzorg ik graag anderen. Ik wil graag iets voor een ander kunnen betekenen, hierin vind ik voldoening. De waardering die daarvoor terugkomt is voor mij onbetaalbaar. Na de beslissing om na 20 jaar het roer om te gooien ben ik op zoek gegaan naar
+							werkzaamheden die vooral te maken hebben met ontzorgen en helpen van anderen. Dat ik deze elementen direct terugvind in de uitvaartbranche vind ik zelf niet gek. De interesse voor de uitvaart is door de eigen ervaringen in mijn omgeving verder aangewakkerd.
+						</p>
+						<p class="mb-6">
+							Door kennis te maken met veel mensen in het werkveld van de uitvaart, heb ik ontdekt dat het verzorgen van overledenen heel goed bij mij past. Een goede verzorging en opbaring uitvoeren is de eerste aanzet voor nabestaanden om het rouwproces te kunnen aanvangen. Het
+							afscheid nemen kan dan écht beginnen. Om het vak Overledenenverzorging en opbaren goed te kunnen uitvoeren heb ik verschillende opleidingen, cursussen en stages gevolgd. De opgedane kennis en vaardigheden kan ik nu gebruiken om andere mensen te helpen na het overlijden
+							van hun dierbare.
+						</p>
+						<p class="mb-6">
+							Als vrijwilliger ben ik werkzaam bij Inloophuis PISA in Hoorn. PISA staat voor Praten Informatie Steun en Aandacht. Het is dankbaar werk om er te kunnen zijn voor de mensen die met kanker in aanraking zijn gekomen of zijn geweest. Vaak is alleen al luisteren naar hun
+							verhaal een grote steun. Hier zet ik mij met alle liefde voor in.
+						</p>
+						<p class="mb-6">Ik kom graag bij u langs of nodig u uit om in Hoorn eens kennis met elkaar te maken. Tijd voor een kop koffie of thee is er altijd, en een afspraak is zo gemaakt. Ik kijk er naar uit!</p>
+						<h4 class="font-serif text-orange">Jos Butter</h4>
+						<br />
+						<p>
+							<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" class="underline decoration-orange hover:text-orange transition-colors duration-300" aria-label="Bel Jos Butter">06-249 990 96</a>
+						</p>
+						<p>
+							<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" class="underline decoration-orange hover:text-orange transition-colors duration-300" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -165,10 +157,10 @@
 							<h4>Jos Butter</h4>
 							<br />
 							<p>
-								<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" aria-label="Bel Jos Butter">06-249 990 96</a>
+								<span class="text-orange"><font-awesome-icon :icon="['fal', 'phone']" /></span> <a href="tel:+31624999096" class="underline decoration-orange hover:text-orange transition-colors duration-300" aria-label="Bel Jos Butter">06-249 990 96</a>
 							</p>
 							<p>
-								<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
+								<span class="text-orange"><font-awesome-icon :icon="['fal', 'envelope']" /></span> <a href="mailto:jos@butteruitvaart.nl" class="underline decoration-orange hover:text-orange transition-colors duration-300" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
 							</p>
 						</div>
 					</div>
@@ -206,7 +198,7 @@
 									<span class="fa-li text-orange">
 										<font-awesome-icon :icon="['fal', 'phone']" />
 									</span>
-									<a href="tel:+31624999096" class="text-white hover:text-orange transition-colors duration-300" aria-label="Bel Jos Butter">06-249 990 96</a>
+									<a href="tel:+31624999096" class="underline decoration-orange text-white hover:text-orange transition-colors duration-300" aria-label="Bel Jos Butter">06-249 990 96</a>
 								</h4>
 							</li>
 							<li>
@@ -217,7 +209,7 @@
 									<span class="fa-li text-orange">
 										<font-awesome-icon :icon="['fal', 'envelope']" />
 									</span>
-									<a href="mailto:jos@butteruitvaart.nl" class="text-white hover:text-orange transition-colors duration-300" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
+									<a href="mailto:jos@butteruitvaart.nl" class="underline decoration-orange text-white hover:text-orange transition-colors duration-300" aria-label="Mail Jos Butter">jos&#64;butteruitvaart.nl</a>
 								</h4>
 							</li>
 						</ul>
