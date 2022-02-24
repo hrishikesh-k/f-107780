@@ -101,7 +101,7 @@
 										<td class="border-b border-gray-light py-3 align-top">
 											<strong>Basisverzorging door 2 personen</strong>
 										</td>
-										<td class="w-1/4 text-right border-b border-gray-light py-3 align-top">€ 240,00</td>
+										<td class="w-1/4 text-right border-b border-gray-light py-3 align-top">€ 220,00</td>
 									</tr>
 									<tr>
 										<td class="border-b border-gray-light py-3 align-top">
