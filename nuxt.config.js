@@ -18,6 +18,7 @@ export default {
     */
     css: [
         "@/assets/css/main.css",
+        '@fortawesome/fontawesome-svg-core/styles.css',
     ],
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -25,7 +26,8 @@ export default {
     ** Plugins to load before mounting the App
     */
     plugins: [
-        { src: '@/plugins/plugins', mode: 'client' }
+        { src: '@/plugins/plugins', mode: 'client' },
+        { src: '@/plugins/fontawesome.js' },
     ],
     /*
     ** Nuxt.js dev-modules
@@ -70,18 +72,6 @@ export default {
                 background_color: '#ffffff',
                 theme_color: '#ffffff'
             },
-        }],
-        ['nuxt-fontawesome', {
-            imports: [
-                {
-                    set: '@fortawesome/pro-light-svg-icons',
-                    icons: ['faBars', 'faTimes', 'faMapMarkerAlt', 'faEnvelope', 'faPhone', 'faArrowLeft', 'faCheck']
-                },
-                {
-                    set: '@fortawesome/free-brands-svg-icons',
-                    icons: ['faFacebookSquare', 'faInstagramSquare', 'faLinkedin']
-                }
-            ]
         }],
     ],
     gsap: {
