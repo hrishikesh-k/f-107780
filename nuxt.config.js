@@ -17,7 +17,6 @@ export default {
     ** Global CSS
     */
     css: [
-        "@/assets/css/main.css",
         '@fortawesome/fontawesome-svg-core/styles.css',
     ],
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -33,7 +32,7 @@ export default {
     ** Nuxt.js dev-modules
     */
     buildModules: [
-        '@nuxt/postcss8',
+        '@nuxtjs/tailwindcss',
         'nuxt-gsap-module',
         '@nuxtjs/axios',
         ['@nuxtjs/google-analytics', {
