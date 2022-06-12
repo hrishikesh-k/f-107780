@@ -52,18 +52,18 @@
               in contact.
             </p>
             <br />
-            <h4 class="animate">{{ company_details.name }}</h4>
+            <h4 class="animate">{{ companyDetails.name }}</h4>
             <br />
             <p class="animate">
               <span class="text-orange">
                 <font-awesome-icon :icon="['fal', 'phone']" />
               </span>
               <a
-                :href="`tel:${company_details.phone_link}`"
+                :href="`tel:${companyDetails.phone_link}`"
                 class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Bel ${company_details.name}`"
+                :aria-label="`Bel ${companyDetails.name}`"
               >
-                {{ company_details.phone }}
+                {{ companyDetails.phone }}
               </a>
             </p>
             <p class="animate">
@@ -71,11 +71,11 @@
                 <font-awesome-icon :icon="['fal', 'envelope']" />
               </span>
               <a
-                :href="`mailto:${company_details.email}`"
+                :href="`mailto:${companyDetails.email}`"
                 class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Mail ${company_details.name}`"
+                :aria-label="`Mail ${companyDetails.name}`"
               >
-                {{ company_details.email }}
+                {{ companyDetails.email }}
               </a>
             </p>
           </div>
@@ -92,7 +92,7 @@
           src="~/assets/images/josbutter.jpg"
           width="520"
           height="520"
-          :alt="company_details.name"
+          :alt="companyDetails.name"
         />
         <div class="col-start-1 row-start-2 bg-blue p-10 pt-36 text-white">
           <h2>Even voorstellen</h2>
@@ -138,18 +138,18 @@
               te maken. Tijd voor een kop koffie of thee is er altijd, en een afspraak is
               zo gemaakt. Ik kijk er naar uit!
             </p>
-            <h4 class="font-serif text-orange">{{ company_details.name }}</h4>
+            <h4 class="font-serif text-orange">{{ companyDetails.name }}</h4>
             <br />
             <p>
               <span class="text-orange"
                 ><font-awesome-icon :icon="['fal', 'phone']"
               /></span>
               <a
-                :href="`tel:${company_details.phone_link}`"
+                :href="`tel:${companyDetails.phone_link}`"
                 class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Bel ${company_details.name}`"
+                :aria-label="`Bel ${companyDetails.name}`"
               >
-                {{ company_details.phone }}
+                {{ companyDetails.phone }}
               </a>
             </p>
             <p>
@@ -157,11 +157,11 @@
                 ><font-awesome-icon :icon="['fal', 'envelope']"
               /></span>
               <a
-                :href="`mailto:${company_details.email}`"
+                :href="`mailto:${companyDetails.email}`"
                 class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Mail ${company_details.name}`"
+                :aria-label="`Mail ${companyDetails.name}`"
               >
-                {{ company_details.email }}
+                {{ companyDetails.email }}
               </a>
             </p>
           </div>
@@ -237,17 +237,17 @@
               <br />
               <p>Een uitgebreide tarievenlijst stuur ik u graag per e-mail.</p>
               <br />
-              <h4>{{ company_details.name }}</h4>
+              <h4>{{ companyDetails.name }}</h4>
               <br />
               <p>
                 <span class="text-orange"
                   ><font-awesome-icon :icon="['fal', 'phone']"
                 /></span>
                 <a
-                  :href="`tel:${company_details.phone_link}`"
+                  :href="`tel:${companyDetails.phone_link}`"
                   class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                  :aria-label="`Bel ${company_details.name}`"
-                  >{{ company_details.phone }}</a
+                  :aria-label="`Bel ${companyDetails.name}`"
+                  >{{ companyDetails.phone }}</a
                 >
               </p>
               <p>
@@ -255,10 +255,10 @@
                   ><font-awesome-icon :icon="['fal', 'envelope']"
                 /></span>
                 <a
-                  :href="`mailto:${company_details.email}`"
+                  :href="`mailto:${companyDetails.email}`"
                   class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                  :aria-label="`Mail ${company_details.name}`"
-                  >{{ company_details.email }}</a
+                  :aria-label="`Mail ${companyDetails.name}`"
+                  >{{ companyDetails.email }}</a
                 >
               </p>
             </div>
@@ -268,7 +268,7 @@
     </section>
     <section>
       <div class="max-w-screen-lg mx-auto pt-10 pb-20">
-        <Rays class="w-64 mx-auto"></Rays>
+        <rays class="w-64 mx-auto" />
       </div>
     </section>
     <section id="contact" class="flex-none bg-blue">
@@ -283,10 +283,10 @@
                   <span class="fa-li text-orange">
                     <font-awesome-icon :icon="['fal', 'map-marker-alt']" />
                   </span>
-                 {{ company_details.company }}
+                 {{ companyDetails.company }}
                 </h4>
-                {{ company_details.address }}<br />
-                {{ company_details.postcode }} {{ company_details.city }}<br />
+                {{ companyDetails.address }}<br />
+                {{ companyDetails.postcode }} {{ companyDetails.city }}<br />
               </li>
             </ul>
           </div>
@@ -298,10 +298,10 @@
                     <font-awesome-icon :icon="['fal', 'phone']" />
                   </span>
                   <a
-                    :href="`tel:${company_details.phone_link}`"
+                    :href="`tel:${companyDetails.phone_link}`"
                     class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
-                    :aria-label="`Bel ${company_details.name}`"
-                    >{{ company_details.phone }}</a
+                    :aria-label="`Bel ${companyDetails.name}`"
+                    >{{ companyDetails.phone }}</a
                   >
                 </h4>
               </li>
@@ -314,10 +314,10 @@
                     <font-awesome-icon :icon="['fal', 'envelope']" />
                   </span>
                   <a
-                    :href="`mailto:${company_details.email}`"
+                    :href="`mailto:${companyDetails.email}`"
                     class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
-                    :aria-label="`Mail ${company_details.name}`"
-                    >{{ company_details.email }}</a
+                    :aria-label="`Mail ${companyDetails.name}`"
+                    >{{ companyDetails.email }}</a
                   >
                 </h4>
               </li>
@@ -360,40 +360,14 @@
 </template>
 
 <script>
-  const company_details = {
-      company: "Butter Uitvaartservice",
-      name: "Jos Butter",
-      address: "Robijn 18",
-      postcode: "1625 RW",
-      city: "Hoorn",
-      phone: "06-249 990 96",
-      phone_link: "+31624999096",
-      email: "jos@butteruitvaart.nl"
-    };
-  const services = [
-    {
-      name: "Basisverzorging door 1 persoon",
-      description: "Samen met ondernemer/familie verzorgen en opbaren",
-      price: "175,00"
-    },
-    {
-      name: "Basisverzorging door 2 personen",
-      description: "",
-      price: "220,00"
-    },
-    {
-      name: "Reiskosten per kilometer",
-      description: "",
-      price: "0,27"
-    }
-  ];
+
 
   export default {
     name: "home",
     data () {
       return {
-        company_details: company_details,
-        services: services,
+        companyDetails: this.$store.state.companyDetails,
+        services: this.$store.state.services,
       }
     },
     computed: {
@@ -403,14 +377,6 @@
       },
     },
     mounted() {
-      // Force to scroll to top because of hash scrolling
-      // Scrollbehavior doesnt work properly
-      this.$nextTick(() => {
-        window.scrollTo({
-          top: 0,
-        });
-      });
-
       this.$gsap.defaults({ease: "sine.inOut"});
 
       this.$gsap.to("#domloading-overlay", {opacity: 0, duration: 1});
