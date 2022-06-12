@@ -1,4 +1,4 @@
-export default function(to, from, savedPosition) {
+export default function (to, from, savedPosition) {
 	if (savedPosition) {
 		// savedPosition is only available for popstate navigations.
 		return savedPosition
