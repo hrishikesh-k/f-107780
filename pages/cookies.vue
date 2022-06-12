@@ -32,8 +32,8 @@
 				<br />
 				<p>
 					Gegevens worden door Google voor een periode van 14 maanden bewaard en hierna verwijderd.<br />
-					Lees het <a href="https://policies.google.com/privacy" class="underline" target="_blank">privacybeleid van Google</a> voor meer informatie, alsook het
-					<a href="https://support.google.com/analytics/answer/6004245" class="underline" target="_blank">specifieke privacybeleid van Google Analytics</a>.
+					Lees het <a href="https://policies.google.com/privacy" class="underline" target="_blank" rel="noopener">privacybeleid van Google</a> voor meer informatie, alsook het
+					<a href="https://support.google.com/analytics/answer/6004245" class="underline" target="_blank" rel="noopener">specifieke privacybeleid van Google Analytics</a>.
 				</p>
 				<p>U kunt via browserinstellingen het volgen met cookies uitzetten.</p>
 				<br />
