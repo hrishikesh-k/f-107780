@@ -24,7 +24,7 @@ export const state = () => ({
     postcode: "1625 RW",
     city: "Hoorn",
     phone: "06-249 990 96",
-    phone_link: "+31624999096",
+    phoneLink: "+31624999096",
     email: "jos@butteruitvaart.nl"
   },
   services: [

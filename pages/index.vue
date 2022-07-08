@@ -2,21 +2,25 @@
   <div class="pt-32 sm:pt-56">
     <section id="home">
       <div class="max-w-screen-lg mx-auto px-4 py-10">
-        <h3 class="animate-1">Post Mortem Support</h3>
-        <br />
-        <h1 class="animate-1">Met aandacht verzorgen</h1>
+        <h3 class="animate-1">
+          Post Mortem Support
+        </h3>
+        <br>
+        <h1 class="animate-1">
+          Met aandacht verzorgen
+        </h1>
       </div>
     </section>
     <section
+      :style="{ backgroundImage: `url(${require('~/assets/images/haven-hoorn.jpg')})` }"
       class="bg-image-container py-40 mx-4 sm:py-72 bg-cover bg-no-repeat"
-      :style="{
-        backgroundImage: 'url(' + require('~/assets/images/haven-hoorn.jpg') + ')',
-      }"
-    ></section>
+    />
     <section id="service">
       <div class="max-w-screen-lg mx-auto px-4 py-10">
-        <h2 class="animate">Met aandacht verzorgd opbaren</h2>
-        <br />
+        <h2 class="animate">
+          Met aandacht verzorgd opbaren
+        </h2>
+        <br>
         <div class="flex flex-wrap sm:flex-nowrap gap-6 sm:gap-10">
           <div class="w-full sm:w-1/2">
             <p class="animate">
@@ -26,13 +30,13 @@
               nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige
               nabestaanden. Het rouwen kan dan pas écht beginnen.
             </p>
-            <br />
+            <br>
             <p class="animate">
               De verzorging kan thuis worden uitgevoerd, hiervoor worden alle
               benodigdheden meegenomen. Tevens kan de verzorging uitgevoerd worden in een
               ziekenhuis, hospice of afscheidshuis.
             </p>
-            <br />
+            <br>
             <p class="animate">
               Met 24/7 bereikbaarheid kan altijd advies worden ingewonnen en hulp worden
               ingeroepen bij verzorging en opbaren. Naast wassen en aankleden kunnen
@@ -46,38 +50,13 @@
               reconstructie of bodyseal en het overbrengen gebeurt in nauwe samenwerking
               met professionele partners die dezelfde kwaliteit van werken nastreven.
             </p>
-            <br />
+            <br>
             <p class="animate">
               Neem vrijblijvend contact op met Butter Uitvaartservice, ik kom graag met u
               in contact.
             </p>
-            <br />
-            <h4 class="animate">{{ companyDetails.name }}</h4>
-            <br />
-            <p class="animate">
-              <span class="text-orange">
-                <font-awesome-icon :icon="['fal', 'phone']" />
-              </span>
-              <a
-                :href="`tel:${companyDetails.phone_link}`"
-                class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Bel ${companyDetails.name}`"
-              >
-                {{ companyDetails.phone }}
-              </a>
-            </p>
-            <p class="animate">
-              <span class="text-orange">
-                <font-awesome-icon :icon="['fal', 'envelope']" />
-              </span>
-              <a
-                :href="`mailto:${companyDetails.email}`"
-                class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Mail ${companyDetails.name}`"
-              >
-                {{ companyDetails.email }}
-              </a>
-            </p>
+            <br>
+            <contact-block :company-details="companyDetails" />
           </div>
         </div>
       </div>
@@ -93,10 +72,10 @@
           width="520"
           height="520"
           :alt="companyDetails.name"
-        />
+        >
         <div class="col-start-1 row-start-2 bg-blue p-10 pt-36 text-white">
           <h2>Even voorstellen</h2>
-          <br />
+          <br>
           <div class="columns-1 sm:columns-2 gap-6 sm:gap-10">
             <p class="mb-6">
               Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn
@@ -138,52 +117,27 @@
               te maken. Tijd voor een kop koffie of thee is er altijd, en een afspraak is
               zo gemaakt. Ik kijk er naar uit!
             </p>
-            <h4 class="font-serif text-orange">{{ companyDetails.name }}</h4>
-            <br />
-            <p>
-              <span class="text-orange"
-                ><font-awesome-icon :icon="['fal', 'phone']"
-              /></span>
-              <a
-                :href="`tel:${companyDetails.phone_link}`"
-                class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Bel ${companyDetails.name}`"
-              >
-                {{ companyDetails.phone }}
-              </a>
-            </p>
-            <p>
-              <span class="text-orange"
-                ><font-awesome-icon :icon="['fal', 'envelope']"
-              /></span>
-              <a
-                :href="`mailto:${companyDetails.email}`"
-                class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                :aria-label="`Mail ${companyDetails.name}`"
-              >
-                {{ companyDetails.email }}
-              </a>
-            </p>
+            <contact-block :company-details="companyDetails" />
           </div>
         </div>
       </div>
     </section>
     <section
       class="bg-image-container py-40 mx-4 sm:py-96 bg-cover bg-no-repeat"
-      :style="{backgroundImage: 'url(' + require('~/assets/images/trees.jpg') + ')'}"
-    ></section>
+      :style="{ backgroundImage: `url(${require('~/assets/images/trees.jpg')})` }"
+    />
     <section id="tarieven">
       <div class="max-w-screen-lg mx-auto px-4 py-10 animate">
         <div class="bg-white shadow-md p-10">
           <h2>Tarieven {{ currentYear }}</h2>
-          <br />
+          <br>
           <div class="flex flex-wrap sm:flex-nowrap gap-10">
             <div class="w-full sm:w-1/2">
               <table class="table-fixed -mt-3">
                 <tbody>
                   <tr v-for="(service, index) in services" :key="`service_${index}`">
                     <td class="border-b border-gray-light pb-3 pt-3 align-top">
-                      <strong>{{ service.name }}</strong><br />
+                      <strong>{{ service.name }}</strong><br>
                       <em v-if="service.description">{{ service.description }}</em>
                     </td>
                     <td
@@ -197,12 +151,12 @@
             </div>
             <div class="w-full sm:w-1/2">
               <p>De dienstverlening bestaat verder uit:</p>
-              <ul class="fa-ul" style="--fa-li-margin: 1.5em;">
+              <ul class="fa-ul" style="--fa-li-margin: 1.5em">
                 <li>
                   <span class="fa-li text-orange">
                     <font-awesome-icon :icon="['fal', 'check']" />
                   </span>
-                  verwijderen van implantaten<br />
+                  verwijderen van implantaten<br>
                   <em>(pacemaker, ICD, katheter, neurostimulatoren)</em>
                 </li>
                 <li>
@@ -218,9 +172,9 @@
                   collegiale hulp voor facilitaire dienstverleners
                 </li>
               </ul>
-              <br />
+              <br>
               <p>In samenwerking met professionele partners:</p>
-              <ul class="fa-ul" style="--fa-li-margin: 1.5em;">
+              <ul class="fa-ul" style="--fa-li-margin: 1.5em">
                 <li>
                   <span class="fa-li text-orange">
                     <font-awesome-icon :icon="['fal', 'check']" />
@@ -234,120 +188,11 @@
                   overbrenging
                 </li>
               </ul>
-              <br />
+              <br>
               <p>Een uitgebreide tarievenlijst stuur ik u graag per e-mail.</p>
-              <br />
-              <h4>{{ companyDetails.name }}</h4>
-              <br />
-              <p>
-                <span class="text-orange"
-                  ><font-awesome-icon :icon="['fal', 'phone']"
-                /></span>
-                <a
-                  :href="`tel:${companyDetails.phone_link}`"
-                  class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                  :aria-label="`Bel ${companyDetails.name}`"
-                  >{{ companyDetails.phone }}</a
-                >
-              </p>
-              <p>
-                <span class="text-orange"
-                  ><font-awesome-icon :icon="['fal', 'envelope']"
-                /></span>
-                <a
-                  :href="`mailto:${companyDetails.email}`"
-                  class="underline decoration-orange hover:text-orange transition-colors duration-300"
-                  :aria-label="`Mail ${companyDetails.name}`"
-                  >{{ companyDetails.email }}</a
-                >
-              </p>
+              <br>
+              <contact-block :company-details="companyDetails" />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="max-w-screen-lg mx-auto pt-10 pb-20">
-        <rays class="w-64 mx-auto" />
-      </div>
-    </section>
-    <section id="contact" class="flex-none bg-blue">
-      <div class="max-w-screen-lg mx-auto px-4 py-10">
-        <h1 class="text-left animate">Contact</h1>
-        <br />
-        <div class="flex flex-wrap sm:flex-nowrap items-top justify-center gap-10 p-2">
-          <div class="w-full sm:w-1/3">
-            <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
-              <li class="animate">
-                <h4 class="text-orange">
-                  <span class="fa-li text-orange">
-                    <font-awesome-icon :icon="['fal', 'map-marker-alt']" />
-                  </span>
-                 {{ companyDetails.company }}
-                </h4>
-                {{ companyDetails.address }}<br />
-                {{ companyDetails.postcode }} {{ companyDetails.city }}<br />
-              </li>
-            </ul>
-          </div>
-          <div class="w-full sm:w-1/3">
-            <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
-              <li class="animate">
-                <h4>
-                  <span class="fa-li text-orange">
-                    <font-awesome-icon :icon="['fal', 'phone']" />
-                  </span>
-                  <a
-                    :href="`tel:${companyDetails.phone_link}`"
-                    class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
-                    :aria-label="`Bel ${companyDetails.name}`"
-                    >{{ companyDetails.phone }}</a
-                  >
-                </h4>
-              </li>
-              <li>
-                <br />
-              </li>
-              <li class="animate">
-                <h4>
-                  <span class="fa-li text-orange">
-                    <font-awesome-icon :icon="['fal', 'envelope']" />
-                  </span>
-                  <a
-                    :href="`mailto:${companyDetails.email}`"
-                    class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
-                    :aria-label="`Mail ${companyDetails.name}`"
-                    >{{ companyDetails.email }}</a
-                  >
-                </h4>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full sm:w-1/3">
-            <ul class="fa-ul flex space-x-4 font-sans text-white" style="--fa-li-margin: 1.5em;">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/butteruitvaartservice/"
-                  class="text-4xl hover:text-orange transition-colors duration-300 animate"
-                  rel="noopener"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                >
-                  <font-awesome-icon :icon="['fab', 'linkedin']" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035"
-                  class="text-4xl hover:text-orange transition-colors duration-300 animate"
-                  rel="noopener"
-                  target="_blank"
-                  aria-label="Facebook"
-                >
-                  <font-awesome-icon :icon="['fab', 'facebook-square']" />
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -355,58 +200,62 @@
     <div
       id="domloading-overlay"
       class="fixed left-0 right-0 top-0 bottom-0 bg-white pointer-events-none"
-    ></div>
+    />
   </div>
 </template>
-
 <script>
+export default {
+  name: 'HomePage',
+  data () {
+    return {
+      companyDetails: this.$store.state.companyDetails,
+      services: this.$store.state.services
+    }
+  },
+  computed: {
+    currentYear () {
+      return new Date().getFullYear()
+    }
+  },
+  mounted () {
+    this.$gsap.defaults({ ease: 'sine.inOut' })
 
+    this.$gsap.to('#domloading-overlay', { opacity: 0, duration: 1 })
 
-  export default {
-    name: "home",
-    data () {
-      return {
-        companyDetails: this.$store.state.companyDetails,
-        services: this.$store.state.services,
+    this.$gsap.fromTo(
+      '.animate-1',
+      { y: 10, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.6, delay: 1.6, duration: 1 }
+    )
+
+    // Animate elements in view
+    this.$gsap.set('.animate', { y: 10, opacity: 0 })
+    this.$ScrollTrigger.batch('.animate', {
+      once: true,
+      onEnter: (elements) => {
+        this.$gsap.to(elements, { y: 0, opacity: 1, duration: 1 })
       }
-    },
-    computed: {
-      currentYear() {
-        var date = new Date();
-        return date.getFullYear();
-      },
-    },
-    mounted() {
-      this.$gsap.defaults({ease: "sine.inOut"});
+    })
 
-      this.$gsap.to("#domloading-overlay", {opacity: 0, duration: 1});
+    // Animate background image on scroll
+    const bigImageContainers = this.$gsap.utils.toArray('.bg-image-container')
+    bigImageContainers.forEach((bigImage) => {
+      this.$gsap.to(bigImage, {
+        backgroundPositionY: '50%',
+        scrollTrigger: {
+          trigger: bigImage,
+          scrub: 1
+        }
+      })
+    })
 
-      this.$gsap.fromTo(
-        ".animate-1",
-        {y: 10, opacity: 0},
-        {y: 0, opacity: 1, stagger: 0.6, delay: 1.6, duration: 1}
-      );
-
-      // Animate elements in view
-      this.$gsap.set(".animate", {y: 10, opacity: 0});
-      this.$ScrollTrigger.batch(".animate", {
-        once: true,
-        onEnter: (elements) => {
-          this.$gsap.to(elements, {y: 0, opacity: 1, duration: 1});
-        },
-      });
-
-      // Animate background image on scroll
-      let bigImageContainers = this.$gsap.utils.toArray(".bg-image-container");
-      bigImageContainers.forEach((bigImage, i) => {
-        this.$gsap.to(bigImage, {
-          backgroundPositionY: "50%",
-          scrollTrigger: {
-            trigger: bigImage,
-            scrub: 1,
-          },
-        });
-      });
-    },
-  };
+    // Force to scroll to top because of hash scrolling
+    // Scrollbehavior doesnt work properly
+    this.$nextTick(() => {
+      window.scrollTo({
+        top: 0
+      })
+    })
+  }
+}
 </script>

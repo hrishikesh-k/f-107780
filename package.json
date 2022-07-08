@@ -1,6 +1,6 @@
 {
     "name": "butteruitvaartservice",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "website",
     "author": "DesignChap",
     "private": true,
@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.12.5",
+        "@nuxtjs/eslint-config": "^10.0.0",
         "@nuxtjs/google-fonts": "^2.0.0",
         "gsap": "^3.9.1",
         "nuxt-gsap-module": "^1.6.0",
