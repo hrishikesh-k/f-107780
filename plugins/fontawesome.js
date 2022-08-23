@@ -8,11 +8,12 @@ import {
   faCheck,
   faMapMarkerAlt,
   faArrowLeft,
+  faExternalLink
 } from '@fortawesome/pro-light-svg-icons'
 import {
   faLinkedin,
-  faFacebookSquare,
- } from '@fortawesome/free-brands-svg-icons'
+  faFacebookSquare
+} from '@fortawesome/free-brands-svg-icons'
 
 // This is important, we are going to let Nuxt.js worry about the CSS
 config.autoAddCss = false
@@ -28,8 +29,8 @@ library.add(
   faLinkedin,
   faFacebookSquare,
   faArrowLeft,
+  faExternalLink
 )
 
-
 // Register the component globally
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('FontAwesomeIcon', FontAwesomeIcon)

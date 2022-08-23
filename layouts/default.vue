@@ -2,13 +2,13 @@
   <div
     class="grid grid-cols-1 min-h-screen w-screen bg-gray-lightest font-sans font-light text-base text-blue"
   >
-    <div class="fixed left-0 right-0 top-0 bg-white shadow-lg z-10">
-      <div class="container max-w-md mx-auto">
+    <div class="fixed left-0 right-0 top-0 bg-white shadow-xl z-10">
+      <div class="container max-w-lg mx-auto">
         <client-only>
           <scrollactive
             :always-track="true"
             :duration="1200"
-            :offset="220"
+            :offset="240"
             @itemchanged="onItemChanged"
           >
             <nuxt-link to="/#home" class="scrollactive-item" aria-label="Home">
@@ -42,7 +42,7 @@
               active-class="text-orange"
               :always-track="true"
               :duration="1200"
-              :offset="220"
+              :offset="240"
               @itemchanged="onItemChanged"
             >
               <ul class="flex flex-col sm:flex-row items-center justify-between gap-2">
@@ -62,118 +62,9 @@
       </div>
     </div>
     <nuxt />
-    <section>
-      <div class="max-w-screen-lg mx-auto pt-10 pb-20">
-        <rays class="w-64 mx-auto" />
-      </div>
-    </section>
-    <section id="contact" class="flex-none bg-blue">
-      <div class="max-w-screen-lg mx-auto px-4 py-10">
-        <h1 class="text-left animate">
-          Contact
-        </h1>
-        <br>
-        <div class="flex flex-wrap sm:flex-nowrap items-top justify-center gap-10 p-2">
-          <div class="w-full sm:w-1/3">
-            <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
-              <li class="animate">
-                <h4 class="text-orange">
-                  <span class="fa-li text-orange">
-                    <font-awesome-icon :icon="['fal', 'map-marker-alt']" />
-                  </span>
-                  {{ companyDetails.company }}
-                </h4>
-                {{ companyDetails.address }}<br>
-                {{ companyDetails.postcode }} {{ companyDetails.city }}<br>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full sm:w-1/3">
-            <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
-              <li class="animate">
-                <h4>
-                  <span class="fa-li text-orange">
-                    <font-awesome-icon :icon="['fal', 'phone']" />
-                  </span>
-                  <a
-                    :href="`tel:${companyDetails.phoneLink}`"
-                    class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
-                    :aria-label="`Bel ${companyDetails.name}`"
-                  >
-                    {{ companyDetails.phone }}
-                  </a>
-                </h4>
-              </li>
-              <li>
-                <br>
-              </li>
-              <li class="animate">
-                <h4>
-                  <span class="fa-li text-orange">
-                    <font-awesome-icon :icon="['fal', 'envelope']" />
-                  </span>
-                  <a
-                    :href="`mailto:${companyDetails.email}`"
-                    class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
-                    :aria-label="`Mail ${companyDetails.name}`"
-                  >
-                    {{ companyDetails.email }}
-                  </a>
-                </h4>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full sm:w-1/3">
-            <ul class="fa-ul flex space-x-4 font-sans text-white" style="--fa-li-margin: 1.5em;">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/butteruitvaartservice/"
-                  class="text-4xl hover:text-orange transition-colors duration-300 animate"
-                  rel="noopener"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                >
-                  <font-awesome-icon :icon="['fab', 'linkedin']" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035"
-                  class="text-4xl hover:text-orange transition-colors duration-300 animate"
-                  rel="noopener"
-                  target="_blank"
-                  aria-label="Facebook"
-                >
-                  <font-awesome-icon :icon="['fab', 'facebook-square']" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="bg-blue-dark py-3 self-end">
-      <div class="container mx-auto">
-        <p class="text-center text-white">
-          <small>
-            © {{ currentYear }} {{ $store.state.companyDetails.company }} |
-            <nuxt-link to="/cookies" aria-label="Cookie Verklaring" class="underline">
-              Cookies
-            </nuxt-link>
-            | Website door
-            <a
-              href="https://www.designchap.nl"
-              rel="noopener"
-              target="_blank"
-              aria-label="Website van DesignChap"
-              class="underline"
-            >
-              DesignChap
-            </a>
-          </small>
-        </p>
-      </div>
-    </div>
+    <rays-section />
+    <contact-section :company-details="companyDetails" />
+    <footer-section :company="companyDetails.company" />
   </div>
 </template>
 <script>
@@ -184,11 +75,6 @@ export default {
       showNav: false,
       pages: this.$store.state.pages,
       companyDetails: this.$store.state.companyDetails
-    }
-  },
-  computed: {
-    currentYear () {
-      return new Date().getFullYear()
     }
   },
   watch: {
