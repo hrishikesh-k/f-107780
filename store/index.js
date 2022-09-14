@@ -49,7 +49,8 @@ export const state = () => ({
     'Advies over Thanatopraxie, uitgevoerd door een professionele partner;',
     'Overbrenging van de overledene in een luxe, maar niet opvallende, rouwauto;',
     'De laatste rit naar afscheidslocatie kan hierin ook verzorgt worden, of ieder ander gewenst voertuig;',
-    'Aandacht met empathie die persoonlijk, creatief en meedenkend is;'
+    'Aandacht met empathie die persoonlijk, creatief en meedenkend is;',
+    'Uitvaartassistentie tijdens de week van afscheid voor iedere ondernemer.'
   ],
   partners: [
     {
