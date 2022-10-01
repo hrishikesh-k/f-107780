@@ -70,6 +70,12 @@ export const state = () => ({
       description: 'Wij voeren een collectie rouwdoeken en uitvaartaccessoires die één karakteristiek geheel vormen. Dessins en combinaties die vernieuwend zijn en gewaardeerd worden door vooraanstaande uitvaartondernemers. Een creatieve zorgvuldig samengestelde collectie waarmee we de Funeral Award 2020 hebben ontvangen.',
       imageName: 'rouwdoeken.gif',
       url: 'https://www.rouwdoeken.nl/'
+    },
+    {
+      name: 'Van Wijk Uitvaartkisten',
+      description: 'Van Wijk Uitvaartkisten is een vijf generaties jong familiebedrijf, dat sinds de oprichting in 1925 door noeste arbeid zijn sporen heeft verdiend in de uitvaart- en meubelbranche. Van bijzonder voordelige tot zeer exclusieve uitvaartkisten. Nergens anders heeft u zoveel keuzemogelijkheden. Wij onderscheiden ons door een uniek en buitengewoon compleet assortiment uitvaartkisten van ambachtelijke topkwaliteit in ieder prijssegment.',
+      imageName: 'van-wijk-uitvaartkisten.gif',
+      url: 'https://www.vanwijkuitvaartkisten.nl/'
     }
   ]
 })
