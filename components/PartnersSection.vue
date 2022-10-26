@@ -34,6 +34,8 @@
               <img
                 :src="`/images/partners/${partner.imageName}`"
                 :alt="partner.name"
+                width="600"
+                height="600"
                 class="w-full"
               >
             </a>
