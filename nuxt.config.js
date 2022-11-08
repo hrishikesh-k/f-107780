@@ -23,21 +23,16 @@ export default {
    */
   plugins: [
     { src: '@/plugins/plugins', mode: 'client' },
+    { src: '@/plugins/gtm.js', mode: 'client' },
     { src: '@/plugins/fontawesome.js' }
   ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    '@nuxtjs/gtm',
     '@nuxtjs/tailwindcss',
     'nuxt-gsap-module',
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: 'UA-498978-34',
-        set: [{ field: 'anonymize_ip', value: true }]
-      }
-    ],
     [
       '@nuxtjs/google-fonts',
       {
@@ -79,6 +74,9 @@ export default {
       }
     ]
   ],
+  gtm: {
+    id: 'GTM-WJDX3XH'
+  },
   gsap: {
     extraPlugins: {
       scrollTo: true,
