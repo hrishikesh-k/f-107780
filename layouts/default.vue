@@ -2,18 +2,19 @@
   <div
     class="grid grid-cols-1 min-h-screen w-screen bg-gray-lightest font-sans font-light text-base text-blue"
   >
-    <div class="fixed left-0 right-0 top-0 bg-white shadow-xl z-10">
-      <div class="container max-w-lg mx-auto">
+    <div ref="nav" class="fixed left-0 right-0 top-0 bg-white shadow-xl z-10">
+      <div class="relative container max-w-xl mx-auto">
         <client-only>
           <scrollactive
+            ref="scrollactive1"
             :always-track="true"
             :duration="1200"
-            :offset="240"
+            :offset="scrollOffset"
             @itemchanged="onItemChanged"
           >
-            <nuxt-link to="/#home" class="scrollactive-item" aria-label="Home">
+            <nuxt-link to="/#home" class="scrollactive-item !border-none" aria-label="Home">
               <div class="px-4 pt-3 pb-3 sm:pb-10">
-                <logo />
+                <Logo />
               </div>
             </nuxt-link>
           </scrollactive>
@@ -39,10 +40,11 @@
         >
           <client-only>
             <scrollactive
-              active-class="text-orange"
+              ref="scrollactive2"
+              :highlight-first-item="true"
               :always-track="true"
               :duration="1200"
-              :offset="240"
+              :offset="scrollOffset"
               @itemchanged="onItemChanged"
             >
               <ul class="flex flex-col sm:flex-row items-center justify-between gap-2">
@@ -62,7 +64,6 @@
       </div>
     </div>
     <nuxt />
-    <rays-section />
     <contact-section :company-details="companyDetails" />
     <footer-section :company="companyDetails.company" />
   </div>
@@ -72,6 +73,7 @@ export default {
   name: 'App',
   data () {
     return {
+      scrollOffset: 0,
       showNav: false,
       pages: this.$store.state.pages,
       companyDetails: this.$store.state.companyDetails
@@ -85,8 +87,25 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.updateScroll)
+    this.initClientOnlyComp()
   },
   methods: {
+    initClientOnlyComp(count = 10) {
+      // Client only might not be ready
+      this.$nextTick(() => {
+        if (this.$refs.scrollactive1 && this.$refs.scrollactive2) {
+          // When client only is ready, check height of nav
+          this.navHeight()
+        } else if (count > 0) {
+          this.initClientOnlyComp(count - 1);
+        }
+      })
+    },
+    navHeight () {
+      const nav = this.$refs.nav
+      const navHeight = nav.clientHeight
+      this.scrollOffset = navHeight
+    },
     onItemChanged () {
       this.showNav = false
     },

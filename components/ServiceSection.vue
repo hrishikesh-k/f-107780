@@ -1,5 +1,5 @@
 <template>
-  <section id="service">
+  <section>
     <div class="max-w-screen-lg mx-auto px-4 py-10">
       <h3 class="animate">
         Post Mortem Support
@@ -44,7 +44,7 @@
             in contact.
           </p>
           <br>
-          <contact-block :company-details="companyDetails" />
+          <ContactBlock :company-details="companyDetails" />
         </div>
       </div>
     </div>

@@ -8,3 +8,9 @@
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule . /index.html [L]
 </IfModule>
+
+<FilesMatch "\.(?i:gif|jpe?g|png|webp|svg|ico|css|js)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=31536000, public, must-revalidate"
+  </IfModule>
+</FilesMatch>

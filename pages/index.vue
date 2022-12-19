@@ -1,19 +1,27 @@
 <template>
-  <div class="pt-[168px] sm:pt-[240px]">
+  <div class="pt-[140px] sm:pt-[270px]">
     <section
-      :style="{ backgroundImage: `url(${require('~/assets/images/haven-hoorn.jpg')})` }"
-      class="bg-image-container py-40 mx-4 sm:py-72 bg-cover bg-no-repeat"
+      id="home"
+      :style="{ backgroundImage: `url('/images/haven-hoorn.jpg')` }"
+      class="bg-image-container mx-4 aspect-video bg-cover bg-no-repeat"
     />
-    <service-section :company-details="companyDetails" />
-    <rays-section />
-    <voorstellen-section :company-details="companyDetails" />
+    <ServiceSection id="service" :company-details="companyDetails" />
+    <RaysSection />
+    <IntroSection id="voorstellen" :company-details="companyDetails" />
     <section
-      :style="{ backgroundImage: `url(${require('~/assets/images/trees.jpg')})` }"
-      class="bg-image-container py-40 mx-4 sm:py-96 bg-cover bg-no-repeat"
+      id="rouwauto"
+      :style="{ backgroundImage: `url('/images/chrysler-pacifica.jpg')` }"
+      class="bg-image-container mx-4 aspect-video bg-cover bg-no-repeat"
     />
-    <tarieven-section :services="services" :company-details="companyDetails" />
-    <rays-section />
-    <partners-section :partners="partners" />
+    <TransportSection :services="services" :company-details="companyDetails" />
+    <RaysSection />
+    <TarievenSection id="tarieven" :services="services" :company-details="companyDetails" />
+    <RaysSection />
+    <section
+      :style="{ backgroundImage: `url('/images/trees.jpg')` }"
+      class="bg-image-container mx-4 aspect-video bg-cover bg-no-repeat"
+    />
+    <PartnersSection id="partners" :partners="partners" class="pt-6" />
     <div
       id="domloading-overlay"
       class="fixed left-0 right-0 top-0 bottom-0 bg-white pointer-events-none"
@@ -46,6 +54,13 @@ export default {
       once: true,
       onEnter: (elements) => {
         this.$gsap.to(elements, { y: 0, opacity: 1, duration: 1 })
+      }
+    })
+    this.$gsap.set('.animate-stagger', { y: 30, opacity: 0 })
+    this.$ScrollTrigger.batch('.animate-stagger', {
+      // once: true,
+      onEnter: (elements) => {
+        this.$gsap.to(elements, { y: 0, opacity: 1, stagger: 0.3, ease: 'back.out' })
       }
     })
 

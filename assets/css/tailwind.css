@@ -8,18 +8,22 @@
     }
 
     h2 {
-        @apply text-3xl font-serif text-orange;
+        @apply text-2xl sm:text-3xl font-serif text-orange;
     }
 
     h3 {
-        @apply font-serif text-2xl text-gray text-center;
+        @apply font-serif text-xl sm:text-2xl text-gray text-center;
     }
 
     h4 {
         @apply font-serif text-orange;
     }
 
-    nav ul li a {
+    .scrollactive-item {
         @apply w-screen sm:w-full block p-2 text-center hover:text-orange border-b-4 border-transparent hover:border-orange transition-all duration-200
+    }
+
+    .scrollactive-item.is-active {
+        @apply text-orange border-orange
     }
 }

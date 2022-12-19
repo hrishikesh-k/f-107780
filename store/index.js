@@ -9,6 +9,10 @@ export const state = () => ({
       url: '/#voorstellen'
     },
     {
+      name: 'Rouwauto',
+      url: '/#rouwauto'
+    },
+    {
       name: 'Tarieven',
       url: '/#tarieven'
     },
