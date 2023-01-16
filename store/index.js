@@ -37,12 +37,12 @@ export const state = () => ({
     socialMedia: [
       {
         name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/butteruitvaartservice/',
+        url: 'www.linkedin.com/in/butteruitvaartservice/',
         icon: 'linkedin'
       },
       {
         name: 'Facebook',
-        url: 'https://www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035',
+        url: 'www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035',
         icon: 'facebook-square'
       }
     ]
@@ -58,28 +58,34 @@ export const state = () => ({
   ],
   partners: [
     {
-      name: 'Memorial Book',
-      description: 'Iedereen rouwt op zijn of haar eigen manier en ook op een door hem of haar gekozen moment. Het is fijn om dan nog is door middel van het lezen van berichten of het bekijken van foto’s stil te staan bij het leven van een overleden dierbare. Memorial Book is hét hedendaagse online platform om die herinneringen aan dierbaren te digitaliseren. Het is daarmee een alternatief voor het bekende papieren gedenkboek.',
-      imageName: 'memorial-book.gif',
-      url: 'https://www.memorial-book.nl/'
-    },
-    {
-      name: 'Uitvaartbegeleiding Rianne de Vries',
-      description: 'De dood is onlosmakelijk verbonden met het leven. Definitief afscheid nemen vraagt om een goede uitvaart. En dit regel ik graag samen met jou. Iedereen verdient een uitvaart, die recht doet aan wie hij of zij was. Afscheid nemen doet iedereen anders en daar ligt precies mijn kracht. Geen 13 in dozen, standaard draaiboeken. Iedere uitvaart is voor mij maatwerk, omdat ik werk vanuit mijn intuïtie kan ik goed luisteren naar jou om te horen wat nodig is.',
-      imageName: 'uitvaartbegeleiding-rianne-de-vries.gif',
-      url: 'https://uitvaartbegeleidingriannedevries.nl/'
+      name: 'De Wilgenstudio',
+      description: 'Ambachtelijk vervaardigde grafmanden en baren. Duurzaam en lokaal. Grotendeels wilg van eigen biologische wilgenteelt. Geschoren schapenvachten van schapen die grazen op de heide en natuurbegraafplaatsen in Nederland. Hout van Staatsbosbeheer.',
+      imageName: 'de-wilgenstudio.gif',
+      url: 'dewilgenstudio.nl'
     },
     {
       name: 'Rouwdoeken',
       description: 'Wij voeren een collectie rouwdoeken en uitvaartaccessoires die één karakteristiek geheel vormen. Dessins en combinaties die vernieuwend zijn en gewaardeerd worden door vooraanstaande uitvaartondernemers. Een creatieve zorgvuldig samengestelde collectie waarmee we de Funeral Award 2020 hebben ontvangen.',
       imageName: 'rouwdoeken.gif',
-      url: 'https://www.rouwdoeken.nl/'
+      url: 'www.rouwdoeken.nl'
     },
     {
       name: 'Van Wijk Uitvaartkisten',
       description: 'Van Wijk Uitvaartkisten is een vijf generaties jong familiebedrijf, dat sinds de oprichting in 1925 door noeste arbeid zijn sporen heeft verdiend in de uitvaart- en meubelbranche. Van bijzonder voordelige tot zeer exclusieve uitvaartkisten. Nergens anders heeft u zoveel keuzemogelijkheden. Wij onderscheiden ons door een uniek en buitengewoon compleet assortiment uitvaartkisten van ambachtelijke topkwaliteit in ieder prijssegment.',
       imageName: 'van-wijk-uitvaartkisten.gif',
-      url: 'https://www.vanwijkuitvaartkisten.nl/'
+      url: 'www.vanwijkuitvaartkisten.nl'
+    },
+    {
+      name: 'Uitvaartbegeleiding Rianne de Vries',
+      description: 'De dood is onlosmakelijk verbonden met het leven. Definitief afscheid nemen vraagt om een goede uitvaart. En dit regel ik graag samen met jou. Iedereen verdient een uitvaart, die recht doet aan wie hij of zij was. Afscheid nemen doet iedereen anders en daar ligt precies mijn kracht. Geen 13 in dozen, standaard draaiboeken. Iedere uitvaart is voor mij maatwerk, omdat ik werk vanuit mijn intuïtie kan ik goed luisteren naar jou om te horen wat nodig is.',
+      imageName: 'uitvaartbegeleiding-rianne-de-vries.gif',
+      url: 'uitvaartbegeleidingriannedevries.nl'
+    },
+    {
+      name: 'Memorial Book',
+      description: 'Iedereen rouwt op zijn of haar eigen manier en ook op een door hem of haar gekozen moment. Het is fijn om dan nog is door middel van het lezen van berichten of het bekijken van foto’s stil te staan bij het leven van een overleden dierbare. Memorial Book is hét hedendaagse online platform om die herinneringen aan dierbaren te digitaliseren. Het is daarmee een alternatief voor het bekende papieren gedenkboek.',
+      imageName: 'memorial-book.gif',
+      url: 'www.memorial-book.nl'
     }
   ]
 })

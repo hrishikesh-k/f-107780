@@ -19,7 +19,7 @@
               <br>
               <a
                 class="inline-block bg-orange text-white shadow-md rounded-sm p-3"
-                :href="partner.url"
+                :href="`https://${partner.url}`"
                 target="_blank"
                 rel="noopener"
               >
@@ -28,7 +28,7 @@
             </div>
             <div class="w-full sm:w-1/3">
               <a
-                :href="partner.url"
+                :href="`https://${partner.url}`"
                 target="_blank"
                 rel="noopener"
               >
