@@ -16,8 +16,8 @@
         </div>
       </div>
       <div class="flex flex-row gap-3 md:gap-6 pt-12">
-        <div v-for="n in 3" class="w-full sm:w-1/3 animate-stagger" :key="n">
-          <nuxt-img :src="`/images/rouwauto-${n}.jpg`" alt="Rouwauto" width="600" height="600" class="w-full rounded-md md:rounded-xl shadow-md md:shadow-2xl" />
+        <div v-for="n in 3" class="w-full sm:w-1/3 rounded-md md:rounded-xl shadow-md md:shadow-2xl overflow-hidden animate-stagger" :key="n">
+          <nuxt-img :src="`/images/rouwauto-${n}.jpg`" alt="Rouwauto" width="600" height="600" class="w-full hover:-translate-y-2 hover:scale-125 duration-700" />
         </div>
       </div>
     </div>
