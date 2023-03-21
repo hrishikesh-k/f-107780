@@ -9,7 +9,8 @@ import {
   faCheck,
   faMapMarkerAlt,
   faArrowLeft,
-  faExternalLink
+  faExternalLink,
+  faDownload,
 } from '@fortawesome/pro-light-svg-icons'
 import {
   faLinkedin,
@@ -31,7 +32,8 @@ library.add(
   faLinkedin,
   faFacebookSquare,
   faArrowLeft,
-  faExternalLink
+  faExternalLink,
+  faDownload,
 )
 
 // Register the component globally

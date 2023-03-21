@@ -60,7 +60,7 @@ export default {
     this.$ScrollTrigger.batch('.animate-stagger', {
       // once: true,
       onEnter: (elements) => {
-        this.$gsap.to(elements, { y: 0, opacity: 1, stagger: 0.3, ease: 'back.out' })
+        this.$gsap.to(elements, { y: 0, opacity: 1, stagger: 0.3, ease: 'back.out(6)' })
       }
     })
 

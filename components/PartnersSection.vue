@@ -22,6 +22,7 @@
                 :href="`https://${partner.url}`"
                 target="_blank"
                 rel="noopener"
+                :aria-label="`Ga naar de website van ${partner.name}`"
               >
                 Bezoek de website <font-awesome-icon :icon="['fal', 'external-link']" />
               </a>
@@ -31,6 +32,7 @@
                 :href="`https://${partner.url}`"
                 target="_blank"
                 rel="noopener"
+                :aria-label="`Ga naar de website van ${partner.name}`"
               >
                 <nuxt-img
                   :src="`/images/partners/${partner.imageName}`"
