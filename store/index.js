@@ -76,10 +76,16 @@ export const state = () => ({
       url: 'www.vanwijkuitvaartkisten.nl'
     },
     {
-      name: 'Uitvaartbegeleiding Rianne de Vries',
-      description: 'De dood is onlosmakelijk verbonden met het leven. Definitief afscheid nemen vraagt om een goede uitvaart. En dit regel ik graag samen met jou. Iedereen verdient een uitvaart, die recht doet aan wie hij of zij was. Afscheid nemen doet iedereen anders en daar ligt precies mijn kracht. Geen 13 in dozen, standaard draaiboeken. Iedere uitvaart is voor mij maatwerk, omdat ik werk vanuit mijn intuïtie kan ik goed luisteren naar jou om te horen wat nodig is.',
-      imageName: 'uitvaartbegeleiding-rianne-de-vries.gif',
-      url: 'uitvaartbegeleidingriannedevries.nl'
+      name: 'Troost Boutique',
+      description: 'Interesse in de prachtige producten van onze Troost Boutique betekent een ingrijpende periode in je leven. Wij verkopen een mooie selectie van urnen, gedenksieraden en troostcadeautjes. Om je zo goed mogelijk van dienst te kunnen zijn, zijn wij geopend op afspraak.',
+      imageName: 'troost-boutique.gif',
+      url: 'www.troostboutique.nl'
+    },
+    {
+      name: 'Boomkisten',
+      description: 'Op een verstilde plek, in de natuurrijke omgeving van Bergen vestigt kunstenaar Bas van Nieuwburg-Bedaux in 2020 een ambachtelijk houtatelier. Hij vervaardigt er zijn ecologische Boomkisten en Boombaren, werkt er in opdracht en biedt familie en nabestaanden een intieme houtwerkplaats met huiselijke ontvangstruimte waar mensen kunnen meewerken aan een kist of baar om zo hun proces van verlies en afscheid te kunnen vormgeven in hout.',
+      imageName: 'boomkisten.gif',
+      url: 'www.boomkisten.nl'
     },
     {
       name: 'Memorial Book',
