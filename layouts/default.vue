@@ -11,8 +11,8 @@
         >
           <Logo
             class="m-auto transition-all duration-500 px-4 pt-3 pb-3 md:pb-10"
-            :class="isScrolling ? 'md:px-28 md:pb-6' : ''"
-            />
+            :class="isScrolling ? 'small' : ''"
+          />
         </NuxtLink>
         <button
           class="absolute right-4 top-4 text-2xl text-blue sm:hidden"

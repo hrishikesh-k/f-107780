@@ -28,6 +28,14 @@
     }
 }
 
+@media (min-width: 640px) {
+    #butteruitvaartservice-logo.small {
+        padding-left: 112px;
+        padding-right: 112px;
+        padding-bottom: 10px;
+    }
+}
+
 .slide-up-fade-enter-active {
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
