@@ -9,9 +9,10 @@
           aria-label="Home"
           @click="navigateOrScroll('#home')"
         >
-          <div class="px-4 pt-3 pb-3 sm:pb-10">
-            <Logo />
-          </div>
+          <Logo
+            class="m-auto transition-all duration-500 px-4 pt-3 pb-3 md:pb-10"
+            :class="isScrolling ? 'md:px-28 md:pb-6' : ''"
+            />
         </NuxtLink>
         <button
           class="absolute right-4 top-4 text-2xl text-blue sm:hidden"
