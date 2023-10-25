@@ -32,7 +32,7 @@
                   </ClientOnly>
                 </span>
                 <a
-                  :href="`tel:${companyDetails.phoneLink}`"
+                  :href="`tel:${companyDetails.phone}`"
                   class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
                   :aria-label="`Bel ${companyDetails.name}`"
                 >
