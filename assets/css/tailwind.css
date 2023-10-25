@@ -29,7 +29,7 @@
 }
 
 @media (min-width: 640px) {
-    #butteruitvaartservice-logo.small {
+    #logo_container.small {
         padding-left: 112px;
         padding-right: 112px;
         padding-bottom: 10px;

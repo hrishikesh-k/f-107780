@@ -22,10 +22,6 @@
       class="bg-image-container mx-4 aspect-video bg-cover bg-no-repeat"
     />
     <PartnersSection id="partners" />
-    <div
-      id="domloading-overlay"
-      class="fixed left-0 right-0 top-0 bottom-0 bg-white pointer-events-none"
-    />
   </div>
 </template>
 <script setup>
@@ -61,8 +57,6 @@ useHead({
 const { gsap, ScrollTrigger } = useGsap()
 onMounted(() => {
   gsap.defaults({ ease: 'sine.inOut' })
-
-  gsap.to('#domloading-overlay', { opacity: 0, duration: 1 })
 
   // Animate elements in view
   gsap.set('.animate', { y: 10, opacity: 0 })
