@@ -1,5 +1,5 @@
-const shortName = 'Butter Uitvaart'
-const siteName = 'Butter Uitvaart - Post Mortem Support'
+const shortName = 'Butter Uitvaartservice'
+const siteName = 'Butter Uitvaartservice - Post Mortem Support'
 const description = 'Met aandacht verzorgd opbaren in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem. Het is vanuit de stellige overtuiging dat wanneer een goed verzorgde opbaring het rouwproces voor nabestaande pas écht begint. De eerste uren na het overlijden is het voor de nabestaanden chaos en weet men soms niet wat hen is overkomen en hoe nu verder. Door een goede verzorging die met aandacht voor zowel de overledene en nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.'
 const themeColor = '#ffffff'
 const baseURL = process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://www.butteruitvaart.nl'
