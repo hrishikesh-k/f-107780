@@ -4,16 +4,19 @@
   >
     <nav class="fixed left-0 right-0 top-0 bg-white shadow-xl z-10">
       <div class="relative container max-w-xl mx-auto">
-        <NuxtLink
-          class="!border-none cursor-pointer"
-          aria-label="Home"
-          @click="navigateOrScroll('#home')"
+        <div
+          id="logo_container"
+          class="m-auto transition-all duration-500 px-4 pt-3 pb-3 md:pb-10"
+          :class="isScrolling ? 'small' : ''"
         >
-          <Logo
-            class="m-auto transition-all duration-500 px-4 pt-3 pb-3 md:pb-10"
-            :class="isScrolling ? 'small' : ''"
-          />
-        </NuxtLink>
+          <NuxtLink
+            class="!border-none cursor-pointer"
+            aria-label="Home"
+            @click="navigateOrScroll('#home')"
+          >
+            <Logo />
+          </NuxtLink>
+        </div>
         <button
           class="absolute right-4 top-4 text-2xl text-blue sm:hidden"
           aria-label="Open navigatie"
@@ -58,6 +61,10 @@
     <NuxtPage />
     <ContactSection id="contact" />
     <FooterSection />
+    <div
+      id="domloading-overlay"
+      class="fixed inset-0 bg-white pointer-events-none z-50"
+    />
   </div>
 </template>
 <script setup>
