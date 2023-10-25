@@ -1,36 +1,27 @@
 {
-    "name": "butteruitvaartservice",
-    "version": "1.4.3",
-    "description": "website",
-    "author": "DesignChap",
     "private": true,
     "scripts": {
-        "dev": "nuxt",
         "build": "nuxt build",
-        "start": "nuxt start",
+        "dev": "nuxt dev",
         "generate": "nuxt generate",
-        "serve": "nuxt serve"
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
     },
     "dependencies": {
-        "@nuxt/image": "^0.7.1",
-        "@nuxtjs/eslint-config": "^10.0.0",
-        "@nuxtjs/google-fonts": "^2.0.0",
-        "@nuxtjs/gtm": "^2.4.0",
-        "gsap": "^3.9.1",
-        "nuxt-gsap-module": "^1.6.0",
-        "smoothscroll-polyfill": "^0.4.4",
-        "vue-scrollactive": "^0.9.3"
-    },
-    "devDependencies": {
-        "@fortawesome/fontawesome-svg-core": "^6.1.0",
-        "@fortawesome/free-brands-svg-icons": "^6.1.0",
-        "@fortawesome/pro-light-svg-icons": "^6.1.0",
-        "@fortawesome/pro-regular-svg-icons": "^6.1.0",
-        "@fortawesome/pro-solid-svg-icons": "^6.1.0",
-        "@fortawesome/vue-fontawesome": "^2.0.6",
-        "@nuxtjs/pwa": "^3.3.4",
-        "@nuxtjs/tailwindcss": "^4.1.2",
-        "nuxt": "^2.17.1",
-        "postcss": "^8.4.18"
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/free-brands-svg-icons": "^6.4.0",
+        "@fortawesome/pro-light-svg-icons": "^6.2.1",
+        "@fortawesome/pro-regular-svg-icons": "^6.4.0",
+        "@fortawesome/pro-solid-svg-icons": "^6.2.1",
+        "@fortawesome/vue-fontawesome": "^3.0.3",
+        "@nuxt/devtools": "^1.0.0",
+        "@nuxt/image": "^1.0.0",
+        "@nuxtjs/google-fonts": "^3.0.1",
+        "@nuxtjs/tailwindcss": "^6.6.5",
+        "@vite-pwa/nuxt": "^0.1.1",
+        "gsap": "^3.12.2",
+        "nuxt": "^3.3.3",
+        "nuxt-gtag": "^1.1.1",
+        "nuxt-og-image": "^2.1.3"
     }
 }

@@ -1,15 +1,15 @@
 <template>
-  <section class="relative">
+  <section class="panel relative">
     <div
       style="grid-template-rows: 7rem"
       class="grid relative max-w-screen-lg mx-auto px-4 pb-10 pt-6 animate"
     >
-      <nuxt-img
+      <NuxtImg
         class="relative h-60 w-60 shadow-lg border-2 border-white rounded-full mx-auto"
         src="/images/josbutter.jpg"
         width="520"
         height="520"
-        :alt="companyDetails.name"
+        alt="Jos Butter"
       />
       <div class="col-start-1 row-start-2 bg-blue p-10 pt-36 text-white">
         <h1 class="animate">
@@ -57,22 +57,9 @@
             te maken. Tijd voor een kop koffie of thee is er altijd, en een afspraak is
             zo gemaakt. Ik kijk er naar uit!
           </p>
-          <ContactBlock :company-details="companyDetails" />
+          <ContactBlock />
         </div>
       </div>
     </div>
   </section>
 </template>
-<script>
-export default {
-  name: 'VoorstellenSection',
-  props: {
-    companyDetails: {
-      type: Object,
-      default () {
-        return {}
-      }
-    }
-  }
-}
-</script>

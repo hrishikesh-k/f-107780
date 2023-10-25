@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="panel">
     <div class="max-w-screen-lg mx-auto px-4 py-10">
       <h1 class="animate">
         Partners
@@ -17,31 +17,32 @@
                 {{ partner.description }}
               </p>
               <br>
-              <a
+              <NuxtLink
                 class="inline-block bg-orange text-white shadow-md rounded-sm p-3"
                 :href="`https://${partner.url}`"
                 target="_blank"
-                rel="noopener"
                 :aria-label="`Ga naar de website van ${partner.name}`"
               >
-                Bezoek de website <font-awesome-icon :icon="['fal', 'external-link']" />
-              </a>
+                Bezoek de website
+                <ClientOnly>
+                  <font-awesome-icon :icon="['fal', 'external-link']" />
+                </ClientOnly>
+              </NuxtLink>
             </div>
             <div class="w-full sm:w-1/3">
-              <a
+              <NuxtLink
                 :href="`https://${partner.url}`"
                 target="_blank"
-                rel="noopener"
                 :aria-label="`Ga naar de website van ${partner.name}`"
               >
-                <nuxt-img
+                <NuxtImg
                   :src="`/images/partners/${partner.imageName}`"
                   :alt="partner.name"
                   width="600"
                   height="600"
                   class="w-full"
                 />
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </ContainerWhite>
@@ -49,16 +50,6 @@
     </div>
   </section>
 </template>
-<script>
-export default {
-  name: 'PartnersSection',
-  props: {
-    partners: {
-      type: Array,
-      default () {
-        return []
-      }
-    }
-  }
-}
+<script setup>
+const partners = useAppConfig().partners
 </script>

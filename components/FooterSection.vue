@@ -3,38 +3,21 @@
     <div class="container mx-auto">
       <p class="text-center text-white">
         <small>
-          © {{ currentYear }} {{ company }} |
-          <nuxt-link to="/cookies" aria-label="Cookie Verklaring" class="underline">
-            Cookies
-          </nuxt-link>
-          | Website door
-          <a
+          © {{ new Date().getFullYear() }} {{ companyDetails.company }} |
+          Website door
+          <NuxtLink
             href="https://www.designchap.nl"
-            rel="noopener"
             target="_blank"
-            aria-label="Website van DesignChap"
+            aria-label="Website van Designchap"
             class="underline"
           >
-            DesignChap
-          </a>
+            Designchap
+          </NuxtLink>
         </small>
       </p>
     </div>
   </div>
 </template>
-<script>
-export default {
-  name: 'FooterSection',
-  props: {
-    company: {
-      type: String,
-      default: ''
-    }
-  },
-  computed: {
-    currentYear () {
-      return new Date().getFullYear()
-    }
-  }
-}
+<script setup>
+const companyDetails = useAppConfig().companyDetails
 </script>

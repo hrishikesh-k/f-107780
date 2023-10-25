@@ -1,14 +1,7 @@
 <template>
   <svg
     id="butteruitvaartservice-logo"
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
     viewBox="0 0 1522.9 455"
-    style="enable-background: new 0 0 1522.9 455"
-    xml:space="preserve"
   >
     <defs>
       <mask id="mask-line-1">
@@ -211,120 +204,120 @@
     </g>
   </svg>
 </template>
-<script>
-export default {
-  name: 'LogoSvg',
-  mounted () {
-    this.animateLogo()
-  },
-  methods: {
-    animateLogo () {
-      function randomNumber (min, max) {
-        return Math.random() * (max - min) + min
-      }
+<script setup>
+const { gsap } = useGsap()
 
-      const rays = this.$gsap.utils.toArray('#butteruitvaartservice-logo .ray')
-      rays.forEach((ray, i) => {
-        this.$gsap.from(ray, randomNumber(1, 3), {
-          opacity: 0.1,
-          yoyo: true,
-          delay: randomNumber(1.5, 2.5),
-          repeat: -1,
-          ease: 'none'
-        })
-      })
+const animateLogo = () => {
+  function randomNumber (min, max) {
+    return Math.random() * (max - min) + min
+  }
 
-      const tl = this.$gsap.timeline()
-      tl.to('#mask-line-1 circle', {
-        scale: 460,
+  const rays = gsap.utils.toArray('#butteruitvaartservice-logo .ray')
+  rays.forEach((ray, i) => {
+    gsap.from(ray, {
+      opacity: 0.1,
+      yoyo: true,
+      duration: randomNumber(1, 3),
+      delay: randomNumber(1.5, 2.5),
+      repeat: -1,
+      ease: 'none'
+    })
+  })
+
+  const tl = gsap.timeline()
+  tl.to('#mask-line-1 circle', {
+    scale: 460,
+    transformOrigin: '50%',
+    ease: 'power2.out'
+  })
+    .to(
+      '#mask-line-2 circle',
+      {
+        scale: 440,
         transformOrigin: '50%',
         ease: 'power2.out'
-      })
-        .to(
-          '#mask-line-2 circle',
-          {
-            scale: 440,
-            transformOrigin: '50%',
-            ease: 'power2.out'
-          },
-          0.2
-        )
-        .to(
-          '#mask-line-3 circle',
-          {
-            scale: 400,
-            transformOrigin: '50%',
-            ease: 'power2.out'
-          },
-          0.4
-        )
-        .to(
-          '#mask-line-4 circle',
-          {
-            scale: 540,
-            transformOrigin: '50%',
-            ease: 'power2.out'
-          },
-          0.6
-        )
-        .to(
-          '#mask-line-5 circle',
-          {
-            scale: 500,
-            transformOrigin: '50%',
-            ease: 'power2.out'
-          },
-          0.8
-        )
-        .to(
-          '#mask-line-6 circle',
-          {
-            scale: 620,
-            transformOrigin: '50%',
-            ease: 'power2.out'
-          },
-          1
-        )
-        .fromTo(
-          [
-            '#b',
-            '#u_1',
-            '#t_1',
-            '#t_2',
-            '#e_1',
-            '#r_1',
-            '#u_2',
-            '#i_1',
-            '#t_3',
-            '#v_1',
-            '#a_1',
-            '#a_2',
-            '#r_2',
-            '#t_4',
-            '#s',
-            '#e_2',
-            '#r_3',
-            '#v_2',
-            '#i_2',
-            '#c',
-            '#e_3'
-          ],
-          { opacity: 0 },
-          {
-            delay: -2,
-            duration: 2,
-            opacity: 1,
-            ease: 'sine.inOut',
-            stagger: {
-              amount: 0.8,
-              from: 'center'
-            }
-          },
-          2.2
-        )
-    }
-  }
+      },
+      0.2
+    )
+    .to(
+      '#mask-line-3 circle',
+      {
+        scale: 400,
+        transformOrigin: '50%',
+        ease: 'power2.out'
+      },
+      0.4
+    )
+    .to(
+      '#mask-line-4 circle',
+      {
+        scale: 540,
+        transformOrigin: '50%',
+        ease: 'power2.out'
+      },
+      0.6
+    )
+    .to(
+      '#mask-line-5 circle',
+      {
+        scale: 500,
+        transformOrigin: '50%',
+        ease: 'power2.out'
+      },
+      0.8
+    )
+    .to(
+      '#mask-line-6 circle',
+      {
+        scale: 620,
+        transformOrigin: '50%',
+        ease: 'power2.out'
+      },
+      1
+    )
+    .fromTo(
+      [
+        '#b',
+        '#u_1',
+        '#t_1',
+        '#t_2',
+        '#e_1',
+        '#r_1',
+        '#u_2',
+        '#i_1',
+        '#t_3',
+        '#v_1',
+        '#a_1',
+        '#a_2',
+        '#r_2',
+        '#t_4',
+        '#s',
+        '#e_2',
+        '#r_3',
+        '#v_2',
+        '#i_2',
+        '#c',
+        '#e_3'
+      ],
+      { opacity: 0 },
+      {
+        delay: -2,
+        duration: 2,
+        opacity: 1,
+        ease: 'sine.inOut',
+        stagger: {
+          amount: 0.8,
+          from: 'center'
+        }
+      },
+      2.2
+    )
 }
+onMounted(() => {
+  setTimeout(() => {
+    animateLogo()
+  }, 200)
+})
 </script>
 
 <style>

@@ -1,14 +1,7 @@
 <template>
   <svg
     class="rays"
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
     viewBox="0 0 610 330"
-    style="enable-background: new 0 0 610 330"
-    xml:space="preserve"
   >
     <g>
       <path
@@ -38,42 +31,41 @@
     </g>
   </svg>
 </template>
-<script>
-export default {
-  name: 'RaysSvg',
-  mounted () {
-    this.animateLogo()
-  },
-  methods: {
-    animateLogo () {
-      function randomNumber (min, max) {
-        return Math.random() * (max - min) + min
-      }
+<script setup>
+const { gsap } = useGsap()
 
-      const rays = this.$gsap.utils.toArray('.rays .ray')
-      rays.forEach((ray, i) => {
-        this.$gsap.to(ray, randomNumber(1, 3), {
-          opacity: 0.1,
-          yoyo: true,
-          delay: randomNumber(1.5, 2.5),
-          repeat: -1,
-          ease: 'none'
-        })
-      })
-    }
+const animateLogo = () => {
+  function randomNumber (min, max) {
+    return Math.random() * (max - min) + min
   }
+
+  const rays = gsap.utils.toArray('.rays .ray')
+  rays.forEach((ray, i) => {
+    gsap.to(ray, {
+      opacity: 0.1,
+      yoyo: true,
+      duration: randomNumber(1, 3),
+      delay: randomNumber(1.5, 2.5),
+      repeat: -1,
+      ease: 'none'
+    })
+  })
 }
+
+onMounted(() => {
+  animateLogo()
+})
 </script>
 <style>
-.st0 {
+.rays .st0 {
   opacity: 0.2;
   fill: #ed7f03;
 }
-.st1 {
+.rays .st1 {
   opacity: 0.6;
   fill: #ed7f03;
 }
-.st2 {
+.rays .st2 {
   fill: #ed7f03;
 }
 </style>

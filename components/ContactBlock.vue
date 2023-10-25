@@ -5,41 +5,35 @@
     </h4>
     <br>
     <p class="animate">
-      <span class="text-orange">
-        <font-awesome-icon :icon="['fal', 'phone']" />
+      <span class="text-orange mr-1">
+        <ClientOnly>
+          <font-awesome-icon :icon="['fal', 'phone']" />
+        </ClientOnly>
       </span>
-      <a
+      <NuxtLink
         :href="`tel:${companyDetails.phoneLink}`"
         class="underline decoration-orange hover:text-orange transition-colors duration-300"
         :aria-label="`Bel ${companyDetails.name}`"
       >
         {{ companyDetails.phone }}
-      </a>
+      </NuxtLink>
     </p>
     <p class="animate">
-      <span class="text-orange">
-        <font-awesome-icon :icon="['fal', 'envelope']" />
+      <span class="text-orange mr-1">
+        <ClientOnly>
+          <font-awesome-icon :icon="['fal', 'envelope']" />
+        </ClientOnly>
       </span>
-      <a
+      <NuxtLink
         :href="`mailto:${companyDetails.email}`"
         class="underline decoration-orange hover:text-orange transition-colors duration-300"
         :aria-label="`Mail ${companyDetails.name}`"
       >
         {{ companyDetails.email }}
-      </a>
+      </NuxtLink>
     </p>
   </div>
 </template>
-<script>
-export default {
-  name: 'ContactBlock',
-  props: {
-    companyDetails: {
-      type: Object,
-      default () {
-        return {}
-      }
-    }
-  }
-}
+<script setup>
+const companyDetails = useAppConfig().companyDetails
 </script>

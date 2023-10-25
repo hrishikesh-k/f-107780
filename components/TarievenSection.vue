@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="panel">
     <ContainerWhite class="px-4 py-10">
       <h1>
         Tarieven
@@ -10,16 +10,18 @@
           <p>De dienstverlening is gevarieerd en niet altijd standaard. Voor tarieven en prijzen neemt u vrijblijvend contact met mij op. Alles kan wat nodig en mogelijk is. Wat er niet is wordt gemaakt of geregeld.</p>
           <br/>
           <p>
-            <a
-                class="inline-block bg-orange text-white shadow-md rounded-sm p-3"
-                href="/downloads/butteruitvaart-kistenboek-2023.pdf"
-                target="_blank"
-                rel="noopener"
-                aria-label="Download het Kistenboek"
-              >
+            <NuxtLink
+              class="inline-block bg-orange text-white shadow-md rounded-sm p-3"
+              href="/downloads/butteruitvaart-kistenboek-2023.pdf"
+              target="_blank"
+              rel="noopener"
+              aria-label="Download het Kistenboek"
+            >
               Download het Kistenboek
-              <font-awesome-icon :icon="['fal', 'download']" fixed-width />
-            </a>
+              <ClientOnly>
+                <font-awesome-icon :icon="['fal', 'download']" fixed-width />
+              </ClientOnly>
+            </NuxtLink>
           </p>
         </div>
         <div class="w-full sm:w-1/2">
@@ -30,7 +32,9 @@
               :key="service"
             >
               <span class="fa-li text-orange">
-                <font-awesome-icon :icon="['fal', 'check']" />
+                <ClientOnly>
+                  <font-awesome-icon :icon="['fal', 'check']" />
+                </ClientOnly>
               </span>
               {{ service }}
             </li>
@@ -38,27 +42,10 @@
           <br>
         </div>
       </div>
-      <ContactBlock :company-details="companyDetails" />
+      <ContactBlock />
     </ContainerWhite>
   </section>
 </template>
-<script>
-
-export default {
-    name: "TarievenSection",
-    props: {
-        services: {
-            type: Array,
-            default() {
-                return [];
-            }
-        },
-        companyDetails: {
-            type: Object,
-            default() {
-                return {};
-            }
-        }
-    },
-}
+<script setup>
+const services = useAppConfig().services
 </script>

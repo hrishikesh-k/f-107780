@@ -1,43 +1,81 @@
-export default {
-  target: 'static',
-  router: {
-    linkActiveClass: 'current',
-    linkExactActiveClass: 'current'
+const shortName = 'Butter Uitvaart'
+const siteName = 'Butter Uitvaart - Post Mortem Support'
+const description = 'Met aandacht verzorgd opbaren in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem. Het is vanuit de stellige overtuiging dat wanneer een goed verzorgde opbaring het rouwproces voor nabestaande pas écht begint. De eerste uren na het overlijden is het voor de nabestaanden chaos en weet men soms niet wat hen is overkomen en hoe nu verder. Door een goede verzorging die met aandacht voor zowel de overledene en nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.'
+const themeColor = '#ffffff'
+const baseURL = process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://www.butteruitvaart.nl'
+
+export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'nl'
+      },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: siteName,
+      meta: [
+        { name: 'description', content: description },
+        { name: 'theme-color', content: themeColor },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+        { rel: 'mask-icon', href: '/mask-icon.svg' },
+        { rel: 'manifest', href: '/manifest.webmanifest' }
+      ]
+    },
+    pageTransition: {
+      name: 'slide-up-fade',
+      mode: 'out-in'
+    },
   },
-  pageTransition: {
-    name: 'slide-up-fade',
-    mode: 'out-in'
+  runtimeConfig: {
+    sendgridApiKey: process.env.SENDGRID_APIKEY,
+    public: {
+      baseURL
+    }
   },
-  generate: {
-    subFolders: false,
-    fallback: '404.html'
+  pwa: {
+    includeAssets: ['favicon.svg', 'favicon.png', 'apple-touch-icon.png', 'mask-icon.svg'],
+    manifest: {
+      lang: 'nl',
+      name: shortName,
+      short_name: shortName,
+      description: description,
+      theme_color: themeColor,
+      icons: [
+        {
+          src: 'icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'icon.png',
+          sizes: '512x512',
+          type: 'image/png'
+        },
+        {
+          src: 'icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any'
+        },
+        {
+          src: 'icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable'
+        }
+      ]
+    }
   },
-  /*
-   ** Global CSS
-   */
-  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [
-    { src: '@/plugins/plugins', mode: 'client' },
-    { src: '@/plugins/gtm.js', mode: 'client' },
-    { src: '@/plugins/fontawesome.js' }
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    '@nuxt/image',
-    '@nuxtjs/gtm',
-    '@nuxtjs/tailwindcss',
-    'nuxt-gsap-module',
-    [
-      '@nuxtjs/google-fonts',
-      {
-        families: {
+  modules: [
+    ['@nuxtjs/google-fonts', {
+      families: {
           'Roboto+Slab': {
             wght: [300, 400, 500],
             ital: [300, 400, 500]
@@ -48,41 +86,31 @@ export default {
           }
         },
         display: 'swap'
-      }
-    ],
-    [
-      '@nuxtjs/pwa',
-      {
-        meta: {
-          name: 'Butter Uitvaartservice - Post Mortem Support in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem',
-          description: 'Met aandacht verzorgd opbaren in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem. Het is vanuit de stellige overtuiging dat wanneer een goed verzorgde opbaring het rouwproces voor nabestaande pas écht begint. De eerste uren na het overlijden is het voor de nabestaanden chaos en weet men soms niet wat hen is overkomen en hoe nu verder. Door een goede verzorging die met aandacht voor zowel de overledene en nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.',
-          lang: 'nl',
-          theme_color: '#ffffff',
-          ogHost: 'https://www.butteruitvaart.nl'
-        },
-        manifest: {
-          name: 'Butter Uitvaartservice - Post Mortem Support',
-          short_name: 'Butter Uitvaartservice',
-          description: 'Met aandacht verzorgd opbaren in de omgeving Noord Holland, West Friesland, Amsterdam, Zaandam, Zaanstreek, Purmerend, Volendam, Waterland, Noordkop, Hollands Kroon, Alkmaar, Haarlem. Het is vanuit de stellige overtuiging dat wanneer een goed verzorgde opbaring het rouwproces voor nabestaande pas écht begint. De eerste uren na het overlijden is het voor de nabestaanden chaos en weet men soms niet wat hen is overkomen en hoe nu verder. Door een goede verzorging die met aandacht voor zowel de overledene en nabestaanden is uitgevoerd, is er vaak al meer rust voor de aanwezige nabestaanden. Het rouwen kan dan pas écht beginnen.',
-          lang: 'nl',
-          display: 'standalone',
-          background_color: '#ffffff',
-          theme_color: '#ffffff'
-        }
-      }
-    ]
+    }],
+    'nuxt-gtag',
+    '@vite-pwa/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image',
+    'nuxt-og-image',
+    '@nuxt/devtools',
   ],
-  gtm: {
-    id: 'GTM-WJDX3XH'
+  image: {
+    provider: 'netlify'
   },
-  gsap: {
-    extraPlugins: {
-      scrollTo: true,
-      scrollTrigger: true,
-      text: true
-    }
+  ogImage: {
+    fonts: [
+      'Roboto+Slab:300'
+    ]
+  },
+  gtag: {
+    id: ''
+  },
+  site: {
+    url: baseURL
   },
   build: {
-    postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } }
+    transpile: [
+      'gsap',
+    ]
   }
-}
+})

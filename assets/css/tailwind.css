@@ -23,7 +23,36 @@
         @apply w-screen sm:w-full block p-2 text-center hover:text-orange border-b-4 border-transparent hover:border-orange transition-all duration-200
     }
 
-    .scrollactive-item.is-active {
+    .scrollactive-item.current {
         @apply text-orange border-orange
     }
+}
+
+.slide-up-fade-enter-active {
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.slide-up-fade-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.slide-up-fade-enter-from,
+.slide-up-fade-leave-to {
+  transform: translate3d(0, 10px, 0);
+  opacity: 0;
+}
+
+.rotate-fade-enter-active,
+.rotate-fade-leave-active {
+    transition: all 0.3s ease;
+}
+
+.rotate-fade-enter-from {
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+.rotate-fade-leave-to {
+    transform: rotate(45deg);
+    opacity: 0;
 }

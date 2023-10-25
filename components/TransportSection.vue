@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="panel">
     <div class="max-w-screen-lg mx-auto px-4 py-10">
       <h1>
         Rouwauto
@@ -12,34 +12,14 @@
         <div class="w-full sm:w-1/2">
           <p>Wanneer er na de verzorging en opbaring ook de laatste rit wordt gevraagd dan zien de nabestaanden de hele week het zelfde vertrouwde gezicht, persoonlijker kan het bijna niet.</p>
           <br>
-          <ContactBlock :company-details="companyDetails" />
+          <ContactBlock />
         </div>
       </div>
       <div class="flex flex-row gap-3 md:gap-6 pt-12">
         <div v-for="n in 3" class="w-full sm:w-1/3 rounded-md md:rounded-xl shadow-md md:shadow-2xl overflow-hidden animate-stagger" :key="n">
-          <nuxt-img :src="`/images/rouwauto-${n}.jpg`" alt="Rouwauto" width="600" height="600" class="w-full hover:-translate-y-2 hover:scale-125 duration-700" />
+          <NuxtImg :src="`/images/rouwauto-${n}.jpg`" alt="Rouwauto" width="600" height="600" class="w-full hover:-translate-y-2 hover:scale-125 duration-700" />
         </div>
       </div>
     </div>
   </section>
 </template>
-<script>
-
-export default {
-    name: "TransportSection",
-    props: {
-        services: {
-            type: Array,
-            default() {
-                return [];
-            }
-        },
-        companyDetails: {
-            type: Object,
-            default() {
-                return {};
-            }
-        }
-    },
-}
-</script>

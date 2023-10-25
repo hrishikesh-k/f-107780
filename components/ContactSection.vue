@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="bg-blue">
+  <section class="panel bg-blue">
     <div class="max-w-screen-lg mx-auto px-4 py-10">
       <h1 class="text-left animate">
         Contact
@@ -11,7 +11,9 @@
             <li class="animate">
               <h4 class="text-orange">
                 <span class="fa-li text-orange">
-                  <font-awesome-icon :icon="['fal', 'map-marker-alt']" />
+                  <ClientOnly>
+                    <font-awesome-icon :icon="['fal', 'map-marker-alt']" />
+                  </ClientOnly>
                 </span>
                 {{ companyDetails.company }}
               </h4>
@@ -25,7 +27,9 @@
             <li class="animate">
               <h4>
                 <span class="fa-li text-orange">
-                  <font-awesome-icon :icon="['fal', 'phone']" />
+                  <ClientOnly>
+                    <font-awesome-icon :icon="['fal', 'phone']" />
+                  </ClientOnly>
                 </span>
                 <a
                   :href="`tel:${companyDetails.phoneLink}`"
@@ -42,7 +46,9 @@
             <li class="animate">
               <h4>
                 <span class="fa-li text-orange">
-                  <font-awesome-icon :icon="['fal', 'envelope']" />
+                  <ClientOnly>
+                    <font-awesome-icon :icon="['fal', 'envelope']" />
+                  </ClientOnly>
                 </span>
                 <a
                   :href="`mailto:${companyDetails.email}`"
@@ -58,15 +64,16 @@
         <div class="w-full sm:w-1/3">
           <ul class="fa-ul flex space-x-4 font-sans text-white" style="--fa-li-margin: 1.5em;">
             <li v-for="item in companyDetails.socialMedia" :key="item.icon">
-              <a
-                :href="item.url"
+              <NuxtLink
+                :href="`https://${item.url}`"
                 class="text-4xl hover:text-orange transition-colors duration-300 animate"
-                rel="noopener"
                 target="_blank"
                 :aria-label="item.name"
               >
-                <font-awesome-icon :icon="['fab', item.icon]" />
-              </a>
+                <ClientOnly>
+                  <font-awesome-icon :icon="['fab', item.icon]" />
+                </ClientOnly>
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -74,16 +81,6 @@
     </div>
   </section>
 </template>
-<script>
-export default {
-  name: 'ContactSection',
-  props: {
-    companyDetails: {
-      type: Object,
-      default () {
-        return {}
-      }
-    }
-  }
-}
+<script setup>
+const companyDetails = useAppConfig().companyDetails
 </script>

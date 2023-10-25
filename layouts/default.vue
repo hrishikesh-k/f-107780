@@ -2,150 +2,137 @@
   <div
     class="grid grid-cols-1 min-h-screen w-screen bg-gray-lightest font-sans font-light text-base text-blue"
   >
-    <div ref="nav" class="fixed left-0 right-0 top-0 bg-white shadow-xl z-10">
+    <nav class="fixed left-0 right-0 top-0 bg-white shadow-xl z-10">
       <div class="relative container max-w-xl mx-auto">
-        <client-only>
-          <scrollactive
-            ref="scrollactive1"
-            :always-track="true"
-            :duration="1200"
-            :offset="scrollOffset"
-            @itemchanged="onItemChanged"
-          >
-            <nuxt-link to="/#home" class="scrollactive-item !border-none" aria-label="Home">
-              <div class="px-4 pt-3 pb-3 sm:pb-10">
-                <Logo />
-              </div>
-            </nuxt-link>
-          </scrollactive>
-        </client-only>
+        <NuxtLink
+          class="!border-none cursor-pointer"
+          aria-label="Home"
+          @click="navigateOrScroll('#home')"
+        >
+          <div class="px-4 pt-3 pb-3 sm:pb-10">
+            <Logo />
+          </div>
+        </NuxtLink>
         <button
           class="absolute right-4 top-4 text-2xl text-blue sm:hidden"
           aria-label="Open navigatie"
           @click="showNav = !showNav"
         >
-          <transition name="rotateFade" mode="out-in">
-            <font-awesome-icon
-              v-if="showNav"
-              key="times"
-              :icon="['fal', 'times']"
-              fixed-width
-            />
-            <font-awesome-icon v-else key="bars" :icon="['fal', 'bars']" fixed-width />
-          </transition>
+          <ClientOnly>
+            <Transition name="rotate-fade" mode="out-in">
+              <font-awesome-icon
+                v-if="showNav"
+                key="xmark"
+                :icon="['fal', 'xmark']"
+                fixed-width
+              />
+              <font-awesome-icon
+                v-else
+                key="bars"
+                :icon="['fal', 'bars']"
+                fixed-width
+              />
+            </Transition>
+          </ClientOnly>
         </button>
         <div
           class="overflow-hidden sm:overflow-auto transition-all duration-500 sm:max-h-full"
           :class="[showNav ? 'max-h-96' : 'max-h-0']"
         >
-          <client-only>
-            <scrollactive
-              ref="scrollactive2"
-              :highlight-first-item="true"
-              :always-track="true"
-              :duration="1200"
-              :offset="scrollOffset"
-              @itemchanged="onItemChanged"
-            >
-              <ul class="flex flex-col sm:flex-row items-center justify-between gap-2">
-                <li v-for="page in pages" :key="page.name">
-                  <nuxt-link
-                    :to="page.url"
-                    class="scrollactive-item"
-                    :aria-label="page.name"
-                  >
-                    {{ page.name }}
-                  </nuxt-link>
-                </li>
-              </ul>
-            </scrollactive>
-          </client-only>
+          <ul class="flex flex-col sm:flex-row items-center justify-between gap-2">
+            <li v-for="navItem in navItems" :key="navItem.name">
+              <button
+                @click="navigateOrScroll(navItem.hash), showNav = false"
+                :data-hash="navItem.hash"
+                class="navItem scrollactive-item cursor-pointer"
+                :aria-label="navItem.name"
+              >
+                {{ navItem.name }}
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <nuxt />
-    <contact-section :company-details="companyDetails" />
-    <footer-section :company="companyDetails.company" />
+    </nav>
+    <NuxtPage />
+    <ContactSection id="contact" />
+    <FooterSection />
   </div>
 </template>
-<script>
-export default {
-  name: 'App',
-  data () {
-    return {
-      scrollOffset: 0,
-      showNav: false,
-      pages: this.$store.state.pages,
-      companyDetails: this.$store.state.companyDetails
-    }
-  },
-  watch: {
-    // After route change close navigation
-    $route () {
-      this.showNav = false
-    }
-  },
-  mounted () {
-    window.addEventListener('scroll', this.updateScroll)
-    this.initClientOnlyComp()
-  },
-  methods: {
-    initClientOnlyComp(count = 10) {
-      // Client only might not be ready
-      this.$nextTick(() => {
-        if (this.$refs.scrollactive1 && this.$refs.scrollactive2) {
-          // When client only is ready, check height of nav
-          this.navHeight()
-        } else if (count > 0) {
-          this.initClientOnlyComp(count - 1);
-        }
-      })
-    },
-    navHeight () {
-      const nav = this.$refs.nav
-      const navHeight = nav.clientHeight
-      this.scrollOffset = navHeight
-    },
-    onItemChanged () {
-      this.showNav = false
-    },
-    updateScroll () {
-      // On scroll change header class
-      if (window.scrollY > 160) {
-        document.body.className = 'scroll'
-      } else {
-        document.body.className = ''
-      }
-    }
+<script setup>
+defineOgImage({component: 'Example', title: 'Met aandacht verzorgen', subtitle: 'Post Mortem Support' })
+
+const { gsap, ScrollTrigger } = useGsap()
+const navItems = useAppConfig().pages
+const showNav = ref(false)
+const isScrolling = ref(false)
+
+const updateScroll = () => {
+  if (window.scrollY > 80) {
+    isScrolling.value = true
+  } else {
+    isScrolling.value = false
   }
 }
+
+const route = useRoute()
+const router = useRouter()
+const navigateOrScroll = (id) => {
+  if (route.path !== '/') {
+    router.push({ path: '/', hash: id })
+    setTimeout(() => {
+      // Wait for DOM ready
+      scrollPanels()
+    }, 900)
+  } else {
+    let y = 0
+    if (id) {
+      y = id
+    }
+    const logoHeight = document.getElementById('butteruitvaartservice-logo').clientHeight + 80
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: y,
+        offsetY: logoHeight
+      },
+      ease: 'expo.inOut'
+    })
+  }
+}
+
+const scrollPanels = () => {
+  const navItems = gsap.utils.toArray('.navItem')
+  const panels = gsap.utils.toArray('.panel')
+  panels.forEach((panel, i) => {
+    ScrollTrigger.create({
+      trigger: panel,
+      bottom: 'top-=80px',
+      onEnter: () => {
+        navItems.forEach((e) => {
+          e.classList.remove('current')
+        })
+        navItems[i].classList.add('current')
+      },
+      onEnterBack: () => {
+        navItems.forEach((e) => {
+          e.classList.remove('current')
+        })
+        navItems[i].classList.add('current')
+      }
+    })
+  })
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', updateScroll)
+  scrollPanels()
+  setTimeout(() => {
+    gsap.to('#domloading-overlay', { opacity: 0, duration: 1 })
+  }, 600)
+})
+
+onUnmounted(() => {
+  ScrollTrigger.getAll().forEach(t => t.kill())
+})
 </script>
-<style>
-  .slide-up-fade-enter-active {
-    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  .slide-up-fade-leave-active {
-    transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  .slide-up-fade-enter,
-  .slide-up-fade-leave-to {
-    transform: translate3d(0, 10px, 0);
-    opacity: 0;
-  }
-
-  .rotateFade-enter-active,
-  .rotateFade-leave-active {
-    transition: all 0.3s ease;
-  }
-
-  .rotateFade-leave-to {
-    transform: rotate(45deg);
-    opacity: 0;
-  }
-
-  .rotateFade-enter {
-    transform: scaleY(0);
-  }
-</style>
