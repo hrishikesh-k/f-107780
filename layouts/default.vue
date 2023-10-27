@@ -61,6 +61,7 @@
     <NuxtPage />
     <ContactSection id="contact" />
     <FooterSection />
+    <CookieConsent />
     <div
       id="domloading-overlay"
       class="fixed inset-0 bg-white pointer-events-none z-50"

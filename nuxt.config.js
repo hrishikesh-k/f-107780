@@ -103,7 +103,8 @@ export default defineNuxtConfig({
     ]
   },
   gtag: {
-    id: ''
+    id: 'G-MJ555L687Q',
+    initialConsent: false
   },
   site: {
     url: baseURL
