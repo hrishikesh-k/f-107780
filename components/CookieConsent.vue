@@ -8,12 +8,12 @@
       <p>Mogen we cookies plaatsen? Deze cookies worden geplaatst door Google Analytics om het gebruik van de website te onderzoeken.</p>
       <div class="flex flex-row gap-3 pt-3">
         <div class="w-full">
-          <button @click="grantConsent(), popupOpen = false" class="cursor-pointer w-full block rounded-full bg-blue text-xl text-white hover:bg-opacity-80 transition-colors duration-300 px-6 py-3">
+          <button @click="grantConsent(), popupOpen = false" class="cursor-pointer w-full block bg-blue text-xl text-white hover:bg-opacity-80 transition-colors duration-300 px-6 py-3">
             Ja, dat mag
           </button>
         </div>
         <div class="w-full">
-          <button @click="popupOpen = false" class="cursor-pointer block w-full rounded-full border border-orange text-rose-700 text-xl hover:bg-opacity-80 transition-colors duration-300 px-6 py-3">
+          <button @click="popupOpen = false" class="cursor-pointer block w-full border border-orange text-rose-700 text-xl hover:bg-opacity-80 transition-colors duration-300 px-6 py-3">
             Nee, bedankt
           </button>
         </div>
