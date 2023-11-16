@@ -10,6 +10,7 @@
           <NuxtLink
             class="!border-none cursor-pointer"
             aria-label="Home"
+            to="/"
             @click="navigateOrScroll('#home')"
           >
             <Logo />
