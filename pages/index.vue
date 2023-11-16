@@ -43,9 +43,6 @@ useSeoMeta({
 })
 useHead({
   title: title,
-  meta: [
-    { hid: 'description', name: 'description', content: description },
-  ],
   link: [
     {
       rel: 'canonical',

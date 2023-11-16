@@ -14,7 +14,6 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       title: siteName,
       meta: [
-        { name: 'description', content: description },
         { name: 'theme-color', content: themeColor },
       ],
       link: [
