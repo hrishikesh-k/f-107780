@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    sendgridApiKey: process.env.SENDGRID_APIKEY,
     public: {
       baseURL
     }
@@ -104,9 +103,6 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-MJ555L687Q',
     initialConsent: false
-  },
-  site: {
-    url: baseURL
   },
   build: {
     transpile: [
