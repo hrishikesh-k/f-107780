@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="grid grid-cols-1 min-h-screen w-screen bg-gray-lightest font-sans font-light text-base text-blue"
-  >
+  <div>
     <nav class="fixed left-0 right-0 top-0 bg-white shadow-xl z-10">
       <div class="relative container max-w-xl mx-auto">
         <div
@@ -58,19 +56,14 @@
         </div>
       </div>
     </nav>
-    <NuxtPage />
-    <ContactSection id="contact" />
-    <FooterSection />
-    <CookieConsent />
     <div
       id="domloading-overlay"
       class="fixed inset-0 bg-white pointer-events-none z-50"
     />
   </div>
 </template>
-<script setup>
-defineOgImage({component: 'Example', title: 'Met aandacht verzorgen', subtitle: 'Post Mortem Support' })
 
+<script setup>
 const { gsap, ScrollTrigger } = useGsap()
 const navItems = useAppConfig().pages
 const showNav = ref(false)

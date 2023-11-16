@@ -1,5 +1,5 @@
 <template>
-  <section class="panel bg-blue">
+  <section id="contact" class="panel bg-blue">
     <div class="max-w-screen-lg mx-auto px-4 py-10">
       <h1 class="text-left animate">
         Contact
