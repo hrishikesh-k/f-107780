@@ -65,7 +65,7 @@
           <ul class="fa-ul flex space-x-4 font-sans text-white" style="--fa-li-margin: 1.5em;">
             <li v-for="item in companyDetails.socialMedia" :key="item.icon">
               <NuxtLink
-                :href="`https://${item.url}`"
+                :href="`${item.url}`"
                 class="text-4xl hover:text-orange transition-colors duration-300 animate"
                 target="_blank"
                 :aria-label="item.name"
