@@ -31,13 +31,13 @@
                     <font-awesome-icon :icon="['fal', 'phone']" />
                   </ClientOnly>
                 </span>
-                <a
-                  :href="`tel:${companyDetails.phone}`"
+                <NuxtLink
+                  :to="`tel:${companyDetails.phone}`"
                   class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
                   :aria-label="`Bel ${companyDetails.name}`"
                 >
                   {{ companyDetails.phone }}
-                </a>
+                </NuxtLink>
               </h4>
             </li>
             <li>
@@ -50,13 +50,13 @@
                     <font-awesome-icon :icon="['fal', 'envelope']" />
                   </ClientOnly>
                 </span>
-                <a
-                  :href="`mailto:${companyDetails.email}`"
+                <NuxtLink
+                  :to="`mailto:${companyDetails.email}`"
                   class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
                   :aria-label="`Mail ${companyDetails.name}`"
                 >
                   {{ companyDetails.email }}
-                </a>
+                </NuxtLink>
               </h4>
             </li>
           </ul>
@@ -65,7 +65,7 @@
           <ul class="fa-ul flex space-x-4 font-sans text-white" style="--fa-li-margin: 1.5em;">
             <li v-for="item in companyDetails.socialMedia" :key="item.icon">
               <NuxtLink
-                :href="`https://${item.url}`"
+                :to="`https://${item.url}`"
                 class="text-4xl hover:text-orange transition-colors duration-300 animate"
                 target="_blank"
                 :aria-label="item.name"
