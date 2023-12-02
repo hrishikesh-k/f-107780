@@ -12,7 +12,7 @@
           <p>
             <NuxtLink
               class="inline-block bg-orange text-white shadow-md rounded-sm p-3"
-              href="/downloads/butteruitvaart-kistenboek-2023.pdf"
+              to="/downloads/butteruitvaart-kistenboek-2023.pdf"
               target="_blank"
               rel="noopener"
               aria-label="Download het Kistenboek"

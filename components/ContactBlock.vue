@@ -11,7 +11,7 @@
         </ClientOnly>
       </span>
       <NuxtLink
-        :href="`tel:${companyDetails.phone}`"
+        :to="`tel:${companyDetails.phone}`"
         class="underline decoration-orange hover:text-orange transition-colors duration-300"
         :aria-label="`Bel ${companyDetails.name}`"
       >
@@ -25,7 +25,7 @@
         </ClientOnly>
       </span>
       <NuxtLink
-        :href="`mailto:${companyDetails.email}`"
+        :to="`mailto:${companyDetails.email}`"
         class="underline decoration-orange hover:text-orange transition-colors duration-300"
         :aria-label="`Mail ${companyDetails.name}`"
       >

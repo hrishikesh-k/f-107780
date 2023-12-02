@@ -19,7 +19,7 @@
               <br>
               <NuxtLink
                 class="inline-block bg-orange text-white shadow-md rounded-sm p-3"
-                :href="`https://${partner.url}`"
+                :to="`https://${partner.url}`"
                 target="_blank"
                 :aria-label="`Ga naar de website van ${partner.name}`"
               >
@@ -31,7 +31,7 @@
             </div>
             <div class="w-full sm:w-1/3">
               <NuxtLink
-                :href="`https://${partner.url}`"
+                :to="`https://${partner.url}`"
                 target="_blank"
                 :aria-label="`Ga naar de website van ${partner.name}`"
               >

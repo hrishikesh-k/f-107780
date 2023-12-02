@@ -8,7 +8,7 @@
             © {{ new Date().getFullYear() }} {{ companyDetails.company }} |
             Website door
             <NuxtLink
-              href="https://www.designchap.nl"
+              to="https://www.designchap.nl"
               target="_blank"
               aria-label="Website van Designchap"
               class="underline"
