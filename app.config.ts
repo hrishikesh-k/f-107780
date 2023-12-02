@@ -36,12 +36,12 @@ export default defineAppConfig({
     socialMedia: [
       {
         name: 'LinkedIn',
-        url: '#',
+        url: 'www.linkedin.com/in/butteruitvaartservice/',
         icon: 'linkedin'
       },
       {
         name: 'Facebook',
-        url: '#',
+        url: 'www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035',
         icon: 'facebook-square'
       }
     ]
