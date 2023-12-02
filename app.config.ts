@@ -33,18 +33,18 @@ export default defineAppConfig({
     city: 'Hoorn',
     phone: '06-249 990 96',
     email: 'jos@butteruitvaart.nl',
-    // socialMedia: [
-    //   {
-    //     name: 'LinkedIn',
-    //     url: 'www.linkedin.com/in/butteruitvaartservice/',
-    //     icon: 'linkedin'
-    //   },
-    //   {
-    //     name: 'Facebook',
-    //     url: 'www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035',
-    //     icon: 'facebook-square'
-    //   }
-    // ]
+    socialMedia: [
+      {
+        name: 'LinkedIn',
+        url: 'www.linkedin.com/in/butteruitvaartservice/',
+        icon: 'linkedin'
+      },
+      {
+        name: 'Facebook',
+        url: 'www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035',
+        icon: 'facebook-square'
+      }
+    ]
   },
   services: [
     'Een verzorging en opbaring die met aandacht en professionele uitrusting wordt uitgevoerd;',
