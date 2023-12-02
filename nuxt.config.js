@@ -100,6 +100,9 @@ export default defineNuxtConfig({
       'Roboto+Slab:300'
     ]
   },
+  site: {
+    url: baseURL
+  },
   gtag: {
     id: 'G-MJ555L687Q',
     initialConsent: false
