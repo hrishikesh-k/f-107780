@@ -36,7 +36,7 @@ export default defineAppConfig({
     socialMedia: [
       {
         name: 'LinkedIn',
-        url: 'www.linkedin.com/in/butteruitvaartservice/',
+        url: 'www.linkedin.com/in/butteruitvaartservice',
         icon: 'linkedin-in'
       },
       {
