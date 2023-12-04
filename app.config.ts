@@ -37,12 +37,12 @@ export default defineAppConfig({
       {
         name: 'LinkedIn',
         url: 'www.linkedin.com/in/butteruitvaartservice/',
-        icon: 'linkedin'
+        icon: 'linkedin-in'
       },
       {
         name: 'Facebook',
         url: 'www.facebook.com/Butter-Uitvaartservice-Post-Mortem-Support-108482781491035',
-        icon: 'facebook-square'
+        icon: 'facebook-f'
       }
     ]
   },

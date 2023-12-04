@@ -12,8 +12,8 @@ import {
   faDownload,
 } from '@fortawesome/pro-light-svg-icons'
 import {
-  faLinkedin,
-  faFacebookSquare
+  faLinkedinIn,
+  faFacebookF
 } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -23,8 +23,8 @@ library.add(
   faEnvelope,
   faCheck,
   faMapMarkerAlt,
-  faLinkedin,
-  faFacebookSquare,
+  faLinkedinIn,
+  faFacebookF,
   faArrowLeft,
   faExternalLink,
   faDownload,

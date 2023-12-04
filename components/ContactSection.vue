@@ -7,7 +7,7 @@
       <br>
       <div class="flex flex-wrap md:flex-nowrap items-top justify-center gap-10 p-2">
         <div class="w-full">
-          <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
+          <ul class="fa-ul font-sans text-white leading-8" style="--fa-li-margin: 1.5em;">
             <li class="animate">
               <h4 class="text-orange">
                 <span class="fa-li text-orange">
@@ -23,7 +23,7 @@
           </ul>
         </div>
         <div class="w-full">
-          <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
+          <ul class="fa-ul font-sans text-white leading-8" style="--fa-li-margin: 1.5em;">
             <li class="animate">
               <h4>
                 <span class="fa-li text-orange">
@@ -66,7 +66,7 @@
             <li v-for="item in companyDetails.socialMedia" :key="item.icon">
               <NuxtLink
                 :to="`https://${item.url}`"
-                class="text-4xl hover:text-orange transition-colors duration-300 animate"
+                class="flex items-center justify-center text-2xl w-10 h-10 bg-white text-blue-dark hover:bg-orange text-center transition-colors duration-300 animate"
                 target="_blank"
                 :aria-label="item.name"
               >
