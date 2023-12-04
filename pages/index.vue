@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[140px] sm:pt-[270px]">
+  <div class="pt-[140px] md:pt-[270px]">
     <section
       id="home"
       :style="{ backgroundImage: `url('/images/haven-hoorn.jpg')` }"

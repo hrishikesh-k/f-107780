@@ -16,7 +16,7 @@
           Even voorstellen
         </h1>
         <br>
-        <div class="columns-1 sm:columns-2 gap-6 sm:gap-10">
+        <div class="columns-1 md:columns-2 gap-6 md:gap-10">
           <p class="mb-6 animate">
             Van huis uit ben ik opgegroeid in Purmerend en woon sinds 2018 in Hoorn
             samen met mijn vrouw Ellie en twee stoere knapen, Stan en Yaniek. Als 8

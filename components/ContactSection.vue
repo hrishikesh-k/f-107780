@@ -5,8 +5,8 @@
         Contact
       </h1>
       <br>
-      <div class="flex flex-wrap sm:flex-nowrap items-top justify-center gap-10 p-2">
-        <div class="w-full sm:w-1/3">
+      <div class="flex flex-wrap md:flex-nowrap items-top justify-center gap-10 p-2">
+        <div class="w-full">
           <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
             <li class="animate">
               <h4 class="text-orange">
@@ -22,7 +22,7 @@
             </li>
           </ul>
         </div>
-        <div class="w-full sm:w-1/3">
+        <div class="w-full">
           <ul class="fa-ul font-sans text-white" style="--fa-li-margin: 1.5em;">
             <li class="animate">
               <h4>
@@ -61,7 +61,7 @@
             </li>
           </ul>
         </div>
-        <div class="w-full sm:w-1/3">
+        <div class="w-full">
           <ul class="fa-ul flex space-x-4 font-sans text-white" style="--fa-li-margin: 1.5em;">
             <li v-for="item in companyDetails.socialMedia" :key="item.icon">
               <NuxtLink

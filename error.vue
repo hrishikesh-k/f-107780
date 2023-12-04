@@ -2,7 +2,7 @@
   <div
     class="grid grid-rows-[1fr,auto] min-h-screen w-screen bg-gray-lightest font-sans font-light text-base text-blue"
   >
-    <main class="pt-[168px] sm:pt-[240px]">
+    <main class="pt-[168px] md:pt-[240px]">
       <div
         class="max-w-lg mx-auto px-4"
       >

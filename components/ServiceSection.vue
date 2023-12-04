@@ -9,8 +9,8 @@
         Met aandacht verzorgen
       </h1>
       <br>
-      <div class="flex flex-col sm:flex-row gap-6 sm:gap-10">
-        <div class="w-full sm:w-1/2">
+      <div class="flex flex-col md:flex-row gap-6 md:gap-10">
+        <div class="w-full">
           <p class="animate">
             Het is vanuit de stellige overtuiging dat een goed verzorgde opbaring
             bijdraagt aan een goede start van het afscheid nemen en het rouwproces. Door
@@ -31,7 +31,7 @@
             implantaten, stoma, katheter en infusen verwijderd worden.
           </p>
         </div>
-        <div class="w-full sm:w-1/2">
+        <div class="w-full">
           <p class="animate">
             Gespecialiseerde overledenenzorg zoals gas- of vochtbehandeling,
             thanatopraxie (lichte balseming), balseming voor repatriëring, restauratie

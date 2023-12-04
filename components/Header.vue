@@ -17,7 +17,7 @@
           </NuxtLink>
         </div>
         <button
-          class="absolute right-4 top-4 text-2xl text-blue sm:hidden"
+          class="absolute right-4 top-4 text-2xl text-blue md:hidden"
           aria-label="Open navigatie"
           @click="showNav = !showNav"
         >
@@ -39,10 +39,10 @@
           </ClientOnly>
         </button>
         <div
-          class="overflow-hidden sm:overflow-auto transition-all duration-500 sm:max-h-full"
+          class="overflow-hidden md:overflow-auto transition-all duration-500 md:max-h-full"
           :class="[showNav ? 'max-h-96' : 'max-h-0']"
         >
-          <ul class="flex flex-col sm:flex-row items-center justify-between gap-2">
+          <ul class="flex flex-col md:flex-row items-center justify-between gap-2">
             <li v-for="navItem in navItems" :key="navItem.name">
               <button
                 @click="navigateOrScroll(navItem.hash), showNav = false"

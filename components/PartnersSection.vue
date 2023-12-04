@@ -5,10 +5,10 @@
         Partners
       </h1>
       <br>
-      <div class="flex flex-col gap-6 sm:gap-10">
+      <div class="flex flex-col gap-6 md:gap-10">
         <ContainerWhite v-for="partner in partners" :key="partner.name">
-          <div class="flex flex-col sm:flex-row gap-6">
-            <div class="w-full sm:w-2/3">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="w-full md:w-2/3">
               <h2 class="break-normal">
                 {{ partner.name }}
               </h2>
@@ -29,7 +29,7 @@
                 </ClientOnly>
               </NuxtLink>
             </div>
-            <div class="w-full sm:w-1/3">
+            <div class="w-full md:w-1/3">
               <NuxtLink
                 :to="`https://${partner.url}`"
                 target="_blank"

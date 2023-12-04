@@ -5,8 +5,8 @@
         Tarieven
       </h1>
       <br>
-      <div class="flex flex-col sm:flex-row gap-6 sm:gap-10">
-        <div class="w-full sm:w-1/2">
+      <div class="flex flex-col md:flex-row gap-6 md:gap-10">
+        <div class="w-full">
           <p>De dienstverlening is gevarieerd en niet altijd standaard. Voor tarieven en prijzen neemt u vrijblijvend contact met mij op. Alles kan wat nodig en mogelijk is. Wat er niet is wordt gemaakt of geregeld.</p>
           <br/>
           <p>
@@ -24,7 +24,7 @@
             </NuxtLink>
           </p>
         </div>
-        <div class="w-full sm:w-1/2">
+        <div class="w-full">
           <p>Bij Butter Uitvaartservice krijgen uitvaartondernemers en/of families:</p>
           <ul class="fa-ul" style="--fa-li-margin: 1.5em">
             <li
