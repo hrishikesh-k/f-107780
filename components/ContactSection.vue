@@ -69,7 +69,7 @@
                 class="flex items-center justify-center text-2xl w-10 h-10 bg-white text-blue-dark hover:bg-orange text-center transition-colors duration-300 animate"
                 target="_blank"
                 :aria-label="item.name"
-                external="true"
+                :external="true"
               >
                 <ClientOnly>
                   <font-awesome-icon :icon="['fab', item.icon]" />
