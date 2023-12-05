@@ -63,12 +63,13 @@
         </div>
         <div class="w-full">
           <ul class="fa-ul flex space-x-4 font-sans text-white" style="--fa-li-margin: 1.5em;">
-            <li v-for="item in companyDetails.socialMedia" :key="item.icon">
+            <li v-for="item in companyDetails.socialMedia" :key="item.url">
               <NuxtLink
                 :to="`https://${item.url}`"
                 class="flex items-center justify-center text-2xl w-10 h-10 bg-white text-blue-dark hover:bg-orange text-center transition-colors duration-300 animate"
                 target="_blank"
                 :aria-label="item.name"
+                external="true"
               >
                 <ClientOnly>
                   <font-awesome-icon :icon="['fab', item.icon]" />
