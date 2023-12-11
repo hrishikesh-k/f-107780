@@ -24,9 +24,6 @@
                 :aria-label="`Ga naar de website van ${partner.name}`"
               >
                 Bezoek de website
-                <ClientOnly>
-                  <font-awesome-icon :icon="['fal', 'external-link']" />
-                </ClientOnly>
               </NuxtLink>
             </div>
             <div class="w-full md:w-1/3">

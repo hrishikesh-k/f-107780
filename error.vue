@@ -26,9 +26,6 @@
           <br>
           <p class="text-center">
             <NuxtLink class="bg-orange text-white shadow-md rounded-sm p-3" to="/#home">
-              <ClientOnly>
-                <font-awesome-icon :icon="['fal', 'arrow-left']" />
-              </ClientOnly>
               Terug naar homepage
             </NuxtLink>
           </p>

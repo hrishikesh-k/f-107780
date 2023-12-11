@@ -21,22 +21,7 @@
           aria-label="Open navigatie"
           @click="showNav = !showNav"
         >
-          <ClientOnly>
-            <Transition name="rotate-fade" mode="out-in">
-              <font-awesome-icon
-                v-if="showNav"
-                key="xmark"
-                :icon="['fal', 'xmark']"
-                fixed-width
-              />
-              <font-awesome-icon
-                v-else
-                key="bars"
-                :icon="['fal', 'bars']"
-                fixed-width
-              />
-            </Transition>
-          </ClientOnly>
+          Menu
         </button>
         <div
           class="overflow-hidden md:overflow-auto transition-all duration-500 md:max-h-full"

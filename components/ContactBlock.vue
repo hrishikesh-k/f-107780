@@ -5,11 +5,6 @@
     </h4>
     <br>
     <p class="animate">
-      <span class="text-orange mr-1">
-        <ClientOnly>
-          <font-awesome-icon :icon="['fal', 'phone']" />
-        </ClientOnly>
-      </span>
       <NuxtLink
         :to="`tel:${companyDetails.phone}`"
         class="underline decoration-orange hover:text-orange transition-colors duration-300"
@@ -19,11 +14,6 @@
       </NuxtLink>
     </p>
     <p class="animate">
-      <span class="text-orange mr-1">
-        <ClientOnly>
-          <font-awesome-icon :icon="['fal', 'envelope']" />
-        </ClientOnly>
-      </span>
       <NuxtLink
         :to="`mailto:${companyDetails.email}`"
         class="underline decoration-orange hover:text-orange transition-colors duration-300"

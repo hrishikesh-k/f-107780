@@ -10,11 +10,6 @@
           <ul class="fa-ul font-sans text-white leading-8" style="--fa-li-margin: 1.5em;">
             <li class="animate">
               <h4 class="text-orange">
-                <span class="fa-li text-orange">
-                  <ClientOnly>
-                    <font-awesome-icon :icon="['fal', 'map-marker-alt']" />
-                  </ClientOnly>
-                </span>
                 {{ companyDetails.company }}
               </h4>
               {{ companyDetails.address }}<br>
@@ -26,11 +21,6 @@
           <ul class="fa-ul font-sans text-white leading-8" style="--fa-li-margin: 1.5em;">
             <li class="animate">
               <h4>
-                <span class="fa-li text-orange">
-                  <ClientOnly>
-                    <font-awesome-icon :icon="['fal', 'phone']" />
-                  </ClientOnly>
-                </span>
                 <NuxtLink
                   :to="`tel:${companyDetails.phone}`"
                   class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
@@ -45,11 +35,6 @@
             </li>
             <li class="animate">
               <h4>
-                <span class="fa-li text-orange">
-                  <ClientOnly>
-                    <font-awesome-icon :icon="['fal', 'envelope']" />
-                  </ClientOnly>
-                </span>
                 <NuxtLink
                   :to="`mailto:${companyDetails.email}`"
                   class="underline decoration-orange text-white hover:text-orange transition-colors duration-300"
@@ -70,11 +55,7 @@
                 target="_blank"
                 :aria-label="item.name"
                 :external="true"
-              >
-                <ClientOnly>
-                  <font-awesome-icon :icon="['fab', item.icon]" />
-                </ClientOnly>
-              </NuxtLink>
+              />
             </li>
           </ul>
         </div>

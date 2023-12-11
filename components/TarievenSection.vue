@@ -18,9 +18,6 @@
               aria-label="Download het Kistenboek"
             >
               Download het Kistenboek
-              <ClientOnly>
-                <font-awesome-icon :icon="['fal', 'download']" fixed-width />
-              </ClientOnly>
             </NuxtLink>
           </p>
         </div>
@@ -31,11 +28,6 @@
               v-for="service in services"
               :key="service"
             >
-              <span class="fa-li text-orange">
-                <ClientOnly>
-                  <font-awesome-icon :icon="['fal', 'check']" />
-                </ClientOnly>
-              </span>
               {{ service }}
             </li>
           </ul>
